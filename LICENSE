@@ -1,4 +1,4 @@
-Quasar: an ultralight python-2.7/python-3.X quantum simulator package
+Lightspeed: An ultralight C++/Python library for electronic structure theory development
 Copyright (C) 2019 Robert Parrish
 
 This library is free software; you can redistribute it and/or
