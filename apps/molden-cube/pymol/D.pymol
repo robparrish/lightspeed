@@ -1,0 +1,27 @@
+# Zero everything out
+reinitialize
+
+# Load Geometry
+load geom.xyz
+util.cbaw
+show_as sticks, geom
+show nb_spheres, geom
+
+# Load Cube Data
+load DTAG.cube
+# Make Isosurfaces at +/-0.002
+isosurface D_p, DTAG,  0.002
+color blue, D_p
+isosurface D_m, DTAG,  -0.002
+color red, D_m
+
+set transparency, 0.5
+
+# Make the scene pretty
+@vis.pymol
+
+# Orient the molecule to a possibly nonstandard orientation
+@orient.pymol
+
+# Make a PNG image
+png DTAG.png, width=800, height=800, ray=1

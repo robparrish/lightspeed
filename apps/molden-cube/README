@@ -1,0 +1,7 @@
+=> Molden-Cube <=
+
+Uses LS to convert molden files to cube file grid properties such as state
+densities, difference densities, and orbitals. Then uses PyMol to visualize
+these cubes.
+
+

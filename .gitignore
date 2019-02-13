@@ -1,0 +1,9 @@
+make.vars
+build
+*.pyc
+*.cache
+*.swp
+*.o
+*.so
+*.d
+*.bak

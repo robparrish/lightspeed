@@ -1,0 +1,54 @@
+=> Lightspeed C++ API <=
+
+Environment:
+ * shared_ptr.hpp - Provides Lightspeed's choice of boost:: or std::shared_ptr.
+ * gpu_context.hpp - Provides GPUContext to manage logical GPU objects.
+ * resource_list.hpp - Provides ResourceList to manage CPU/GPU resources.
+Math:
+ * math.hpp - Provides BLAS and LAPACK headers for C++ interface.
+ * tensor.hpp - Provides Tensor to facilitate manipulation of core rectilinear
+    tensor data.
+ * solver.hpp - Provides DIIS and Davidson to solve large-scale Krylov-type
+    problems. Uses Storage as an intermediate storage class on core or disk.
+Core:
+ * molecule.hpp - Provides Atom and Molecule objects to represent molecular
+    geometry.
+ * am.hpp - Provide AngularMomentum to represent formal ordering of Gaussian
+    basis functions and spherical transformation coefficients.
+ * basis.hpp - Provides Primitive and Basis objects to represent Gaussian basis
+    sets.
+ * pair_list.hpp - Provides Pair, PairListL, and PairList to hold
+    angular-momentum-sorted, spatially-sieved, and
+    permutational-symmetry-sieved
+    pairs of Primitive shells.
+ * hermite.hpp - (C++ Only). Provides Hermite Gaussian representation of
+    PairList object for high-performance computation of Coulomb-type integrals
+    and grid properties.
+ * pure_transform.hpp - Provides PureTransform utility class to facilitate
+    transformation between natural representation (pure and/or Cartesian
+    functions) and wholly Cartesian representation. Usually only needed by
+    advanced users.
+ * ewald.hpp - Provides Ewald to represent Ewald-type two-body interactions.
+ * rys.hpp - (Mostly C++). Provides a high-accuracy representaton of the Rys
+    quadrature tables.
+ * boys.hpp - (Mostly C++). Provides a high-accuracy representaton of the Boys
+    function tables.
+ * gh.hpp - (Mostly C++). Provides a high-accuracy representation of the
+    Gauss-Hermite quadrature tables.
+IntBox:
+ * intbox.hpp - Provides static class IntBox to perform computations of
+    Gaussian integrals on CPU and GPU.
+CIBox:
+ * cibox.hpp - Provides CASBox to encapsulate and manipulate configuration
+    interaction computations in a complete active space.
+GridBox:
+ * gridbox.hpp - Provides HashedGrid and GridBox to ompute grid collocation
+    properties.
+DFTBox:
+ * dftbox.hpp - Provides Functional and DFTBox to compute DFT potential and
+    gradient properties.
+Utility:
+ * cubic.hpp - Provides CubicGrid to manipulate operations involving Gaussian
+     cube files and Fourier grids.
+ * sad.hpp - Provides SAD to compute the superposition of atomic densities
+    (SAD) guess orbitals.

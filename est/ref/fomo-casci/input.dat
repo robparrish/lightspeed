@@ -1,0 +1,33 @@
+guess           	sad
+gpus            	2
+
+basis           	6-31g
+method                  HF
+convthre                1e-7
+threall                 1e-13
+threspdp                1e-6
+maxit                   200
+precision               mixed
+charge                  0 
+spinmult                1
+
+fon_method              fermi
+fon                     yes
+fon_anneal              no
+fon_target              0.3
+fon_temperature         0.3
+casci                   yes
+castarget               0
+castargetmult           3
+cassinglets             3
+castriplets             3
+closed                  2
+active                  5
+
+dci_explicit_h          yes
+
+cphftol 1e-8
+
+run             	gradient
+
+coordinates             h2o.xyz

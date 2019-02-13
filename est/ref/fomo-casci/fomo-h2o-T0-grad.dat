@@ -1,0 +1,521 @@
+Startfile from command line: input.dat
+
+
+       ***********************************************************
+       *                    TeraChem v1.9-2017.09-dev            *
+       *                 Hg Version: 75b6b7648c43+               *
+       *                   Development Version                   *
+       *                Compiled without textures                *
+       *           Chemistry at the Speed of Graphics!           *
+       ***********************************************************
+       * This program may only be used in connection with        *
+       * a valid license from PetaChem, LLC. Use of this program *
+       * or results thereof indicates acceptance of all terms    *
+       * and conditions stated in the license and that a valid   *
+       * license agreement between the user and PetaChem, LLC    *
+       * exists. PetaChem, LLC does not warrant the correctness  *
+       * of results or their suitability for any purpose.        *
+       * Please email bugs, suggestions, and comments to         *
+       *                  help@petachem.com                      *
+       *                                                         *
+       ***********************************************************
+
+
+       ***********************************************************
+       *  Compiled by parrish      Sun Dec 10 21:58:28 PST 2017  *
+       *  Supported architectures: sm_30 sm_35 sm_52 sm_61       *
+       *  Cuda compilation tools, release 8.0, V8.0.44           *
+       ***********************************************************
+
+
+ Job started   Sun Dec 10 22:35:56 2017
+ On fire-12-04 (available memory: 269326 MB)
+
+######################################### RUNTIME INFO ##########################################
+terachem input.dat 
+
+NVRM version: NVIDIA UNIX x86_64 Kernel Module  384.27  Sun May 21 00:39:55 PDT 2017
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+
+	linux-vdso.so.1 =>  (0x00007ffdfb9f5000)
+	libcurl.so.4 => /usr/lib64/libcurl.so.4 (0x00007f055d360000)
+	libmpi.so.12 => /global/software/impi/5.1.1.109-iccifort-2016.0.109/lib64/libmpi.so.12 (0x00007f055cba8000)
+	libdftbplus.so => /home/parrish/Code/production2/build/lib/libdftbplus.so (0x00007f055c688000)
+	libfsockets.so => /home/parrish/Code/production2/build/lib/libfsockets.so (0x00007f055c483000)
+	libxmlf90.so => /home/parrish/Code/production2/build/lib/libxmlf90.so (0x00007f055c25e000)
+	libOpenMM.so => /global/software/OpenMM/7.1-intel-2016.0.109-CUDA-8.0.44/lib/libOpenMM.so (0x00007f055bc9c000)
+	libintbox.so.1 => /home/parrish/Code/production2/build/lib/libintbox.so.1 (0x00007f053ddcd000)
+	libthcbox.so.1 => /home/parrish/Code/production2/build/lib/libthcbox.so.1 (0x00007f053c2d7000)
+	libgridbox.so.1 => /home/parrish/Code/production2/build/lib/libgridbox.so.1 (0x00007f053be05000)
+	libdftbox.so.1 => /home/parrish/Code/production2/build/lib/libdftbox.so.1 (0x00007f053bb1f000)
+	libcuda.so.1 => /usr/lib64/libcuda.so.1 (0x00007f053ad04000)
+	libcudart.so.8.0 => /home/parrish/Code/production2/build/lib/libcudart.so.8.0 (0x00007f053aa9e000)
+	libcublas.so.8.0 => /home/parrish/Code/production2/build/lib/libcublas.so.8.0 (0x00007f05380ed000)
+	libcufft.so.8.0 => /home/parrish/Code/production2/build/lib/libcufft.so.8.0 (0x00007f052f29f000)
+	libcrypto.so.10 => /usr/lib64/libcrypto.so.10 (0x00007f052eeb5000)
+	libssl.so.10 => /usr/lib64/libssl.so.10 (0x00007f052ec46000)
+	libm.so.6 => /usr/lib64/libm.so.6 (0x00007f052e944000)
+	libcilkrts.so.5 => /home/parrish/Code/production2/build/lib/libcilkrts.so.5 (0x00007f052e703000)
+	libstdc++.so.6 => /usr/lib64/libstdc++.so.6 (0x00007f052e3f9000)
+	libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x00007f052e1e3000)
+	libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x00007f052dfc7000)
+	libc.so.6 => /usr/lib64/libc.so.6 (0x00007f052dc05000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f055d5dc000)
+	libdl.so.2 => /usr/lib64/libdl.so.2 (0x00007f052da01000)
+	libidn.so.11 => /usr/lib64/libidn.so.11 (0x00007f052d7ce000)
+	libssh2.so.1 => /usr/lib64/libssh2.so.1 (0x00007f052d5a3000)
+	libssl3.so => /usr/lib64/libssl3.so (0x00007f052d357000)
+	libsmime3.so => /usr/lib64/libsmime3.so (0x00007f052d130000)
+	libnss3.so => /usr/lib64/libnss3.so (0x00007f052ce05000)
+	libnssutil3.so => /usr/lib64/libnssutil3.so (0x00007f052cbd8000)
+	libplds4.so => /usr/lib64/libplds4.so (0x00007f052c9d4000)
+	libplc4.so => /usr/lib64/libplc4.so (0x00007f052c7ce000)
+	libnspr4.so => /usr/lib64/libnspr4.so (0x00007f052c590000)
+	libgssapi_krb5.so.2 => /usr/lib64/libgssapi_krb5.so.2 (0x00007f052c342000)
+	libkrb5.so.3 => /usr/lib64/libkrb5.so.3 (0x00007f052c05a000)
+	libk5crypto.so.3 => /usr/lib64/libk5crypto.so.3 (0x00007f052be28000)
+	libcom_err.so.2 => /usr/lib64/libcom_err.so.2 (0x00007f052bc24000)
+	liblber-2.4.so.2 => /usr/lib64/liblber-2.4.so.2 (0x00007f052ba14000)
+	libldap-2.4.so.2 => /usr/lib64/libldap-2.4.so.2 (0x00007f052b7c1000)
+	libz.so.1 => /usr/lib64/libz.so.1 (0x00007f052b5ab000)
+	librt.so.1 => /usr/lib64/librt.so.1 (0x00007f052b3a2000)
+	libmkl_intel_lp64.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_intel_lp64.so (0x00007f052aa64000)
+	libmkl_intel_thread.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_intel_thread.so (0x00007f052970d000)
+	libmkl_core.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_core.so (0x00007f0527e27000)
+	libiomp5.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libiomp5.so (0x00007f0527ae6000)
+	libifport.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libifport.so.5 (0x00007f05278b7000)
+	libifcoremt.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libifcoremt.so.5 (0x00007f0527524000)
+	libimf.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libimf.so (0x00007f052702c000)
+	libsvml.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libsvml.so (0x00007f052616d000)
+	libintlc.so.5 => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libintlc.so.5 (0x00007f0525f0d000)
+	libirng.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libirng.so (0x00007f0525d05000)
+	libnvidia-fatbinaryloader.so.384.27 => /usr/lib64/libnvidia-fatbinaryloader.so.384.27 (0x00007f0525ab2000)
+	libkrb5support.so.0 => /usr/lib64/libkrb5support.so.0 (0x00007f05258a2000)
+	libkeyutils.so.1 => /usr/lib64/libkeyutils.so.1 (0x00007f052569e000)
+	libresolv.so.2 => /usr/lib64/libresolv.so.2 (0x00007f0525484000)
+	libsasl2.so.3 => /usr/lib64/libsasl2.so.3 (0x00007f0525266000)
+	libselinux.so.1 => /usr/lib64/libselinux.so.1 (0x00007f052503f000)
+	libcrypt.so.1 => /usr/lib64/libcrypt.so.1 (0x00007f0524e07000)
+	libpcre.so.1 => /usr/lib64/libpcre.so.1 (0x00007f0524ba6000)
+	libfreebl3.so => /usr/lib64/libfreebl3.so (0x00007f05249a3000)
+#################################################################################################
+
+Cannot find license.dat file in the TeraChem installation directory /home/parrish/Code/production2/build
+
+
+TRYING THE NETWORK LICENSE...
+Connecting to license server '54.208.252.40' port '8877'...
+Connected!
+Checking your license...
+
+**************************************************************
+  Greetings, Martinez Group! You have 1000 licenses in total
+  IN USE: 30
+  AVAILABLE: 970
+**************************************************************
+
+Scratch directory: ./scr
+Random number seed: 1533510048
+
+XYZ coordinates h2o.xyz
+Molden File Output: ./scr/h2o.molden
+Using basis set: 6-31g
+Spin multiplicity: 1
+DIIS will use up to 10 vectors.
+WF convergence threshold: 1.00e-07
+Using DIIS algorithm to converge WF
+Maximum number of SCF iterations: 200
+Incremental fock with rebuild every 8 iterations
+Will switch to conventional Fock if diffuse functions are detected
+X-matrix tolerance: 1.00e-04
+PRECISION: MIXED
+Single/Double precision threshold: 1.00e-06
+Using fractional orbital occupations
+Fractional occupations determined from the Fermi-Dirac distribution
+2 occupied orbitals will have integer occupation
+5 occupied orbitals will have fractional occupation
+kT is set to  0.300 a.u.
+DFT Functional requested: hf
+Method: Hartree-Fock 
+Wavefunction: RESTRICTED
+Initial guess generated from superposition of atomic densities generated with HF,
+using spherically symmetric atomic densities and averaged alpha and beta spin densities.
+
+********************************************
+**** SINGLE POINT GRADIENT CALCULATIONS ****
+********************************************
+SCF:   Initial guess is taken from previous step
+
+using 2 out of 8 CUDA devices
+   Device 0:      GeForce GTX 970,  4037MB, CC 5.2 -- CPU THREAD 0
+   Device 1:      GeForce GTX 970,  4037MB, CC 5.2 -- CPU THREAD 1
+   Device 2:      GeForce GTX 970, 4037MB, CC 5.2 -- IDLE
+   Device 3:      GeForce GTX 970, 4037MB, CC 5.2 -- IDLE
+   Device 4:      GeForce GTX 970, 4037MB, CC 5.2 -- IDLE
+   Device 5:      GeForce GTX 970, 4037MB, CC 5.2 -- IDLE
+   Device 6:      GeForce GTX 970, 4037MB, CC 5.2 -- IDLE
+   Device 7:      GeForce GTX 970, 4037MB, CC 5.2 -- IDLE
+-------------------------------------------------------------------
+Compiled with MAGMA support.  MAGMA parameters:
+    Matrices larger than 5000 square will be treated with MAGMA
+       (Change by setting the MagmaMinN environment variable)
+    Magma will use 1 out of 2 GPUs
+       (Change by setting the MagmaNGPUs environment variable)
+-------------------------------------------------------------------
+ CPU Memory Available: 48347.00 MegaWords 
+ GPU Memory Available: 248.67 MegaWords 
+ Maximum recommended basis set size: 5100 basis functions
+ (limited by GPU memory)
+-------------------------------------------------------------------
+Not using d-functions. Configuring GPUs accordingly.
+0: CUBLAS initialized, available GPU memory: 2712MB
+1: CUBLAS initialized, available GPU memory: 2712MB
+
+****** QM coordinates ******
+O         0.0000000000        -0.0757918378         0.0000000000  
+H         0.8668117628         0.6014357333        -0.0000000000  
+H        -0.8668117628         0.6014357333        -0.0000000000  
+
+Basis set:       6-31g
+Total atoms:     3
+Total charge:    0
+Total electrons: 10 (5-alpha, 5-beta)
+Number electrons modeled by ECPs: 0
+Total orbitals:  13
+Total AO shells: 9 (7 S-shells; 2 P-shells; 0 D-shells; 0 F-shells; 0 G-shells)
+Spin multiplicity: 1
+Nuclear repulsion energy (QM atoms): 8.002367676531 a.u.
+
+Using neutral atomic charges and default spins and spin directions.
+Number of unique atoms is: 2 
+Atom #1 is unique. Calculating atomic density. 
+Atom #2 is unique. Calculating atomic density. 
+
+                      *** Start SCF Iterations ***
+
+ Iter     DIIS Error       Energy change         Energy        Time(s)
+------------------------------------------------------------------------
+Initial temperature is 0.300000
+         >>> Purifying P... IDMP = 2.46e-01 <<<
+         >>> Purifying P... IDMP = 1.90e-01 <<<
+         >>> Purifying P... IDMP = 1.50e-01 <<<
+         >>> Purifying P... IDMP = 9.55e-02 <<<
+         >>> Purifying P... IDMP = 3.49e-02 <<<
+         >>> Purifying P... IDMP = 4.17e-03 <<<
+         >>> Purifying P... IDMP = 5.62e-05 <<<
+         >>> Purifying P... IDMP = 9.79e-09 <<<
+         >>> Purifying P... IDMP = 3.33e-16 <<<
+   1     0.9124468982     -75.7450501961     -75.7450501961     0.01  
+   2     0.2789452892      +0.6992236597     -75.0458265364     0.00  
+   3     0.1260848190      -0.1467203412     -75.1925468776     0.00  
+   4     0.0246300849      +0.0734310146     -75.1191158631     0.00  
+   5     0.0035079276      +0.0066986542     -75.1124172089     0.00  
+   6     0.0007546534      +0.0005499906     -75.1118672183     0.00  
+   7     0.0000503644      +0.0002198538     -75.1116473645     0.00  
+   8     0.0000081586      +0.0000044428     -75.1116429216     0.00  
+   9     0.0000015864      -0.0000009803     -75.1116439019     0.00  
+  10     0.0000000756      -0.0000001744     -75.1116440764     0.00  
+------------------------------------------------------------------------
+FINAL ENERGY: -75.1116440764 a.u.
+WARNING: Final energy is higher than the lowest energy by     0.080903.
+Fractional Occupation Entropy: 5.4029327049
+Mermin Free Energy:            -76.7325238878
+CENTER OF MASS: {0.000000, 0.000000, 0.000000} ANGS
+DIPOLE MOMENT: {-0.000000, -0.159069, -0.000000} (|D| = 0.159069) DEBYE
+
+Running Mulliken population analysis...
+
+
+  Active Space Parameters
+--------------------------------------------
+Number of closed orbitals:               2
+Number of active orbitals:               5
+Number of virtual orbitals:              6
+Number of molecular orbitals:           13
+Number of basis functions:              13
+Number of active electrons:              6
+Number of alpha electrons:               3
+Number of beta electrons:                3
+
+  Orbital      Energy        Occupation
+-----------------------------------------
+      1      -20.795281        1.000000
+      2       -1.436911        1.000000
+      3       -0.716352        0.853594
+      4       -0.605096        0.800946
+      5       -0.507998        0.744323
+      6        0.020040        0.333684
+      7        0.114843        0.267454
+      8        0.954549        0.000000
+      9        0.959100        0.000000
+
+  CAS Parameters
+--------------------------------------------
+Number of determinants:                100
+Number of singlet CSFs:                 50
+Number of doublet CSFs:                  0
+Number of triplet CSFs:                 45
+Number of quartet CSFs:                  0
+Number of quintet CSFs:                  5
+Number of sextet CSFs:                   0
+Number of septet CSFs:                   0
+Number of singlet states:                3
+Number of doublet states:                0
+Number of triplet states:                3
+Number of quartet states:                0
+Number of quintet states:                0
+Number of sextet states:                 0
+Number of septet states:                 0
+
+Singlet state  1 energy:        -75.96706599738809
+
+        0.93788293966643  X3 X4 X5
+        0.16218025607995  A3 X4 X5 B7
+        0.16218025607995  B3 X4 X5 A7
+        0.16216246261062  X3 A4 X5 B6
+        0.16216246261062  X3 B4 X5 A6
+       -0.06114538984500  X4 X5 X7
+       -0.04334500651217  X3 X5 X6
+       -0.03950674028563  A3 B4 X5 A6 B7
+       -0.03950674028563  B3 A4 X5 B6 A7
+       -0.03878766670123  X4 X5 X6
+       -0.03700237057063  X3 X5 X7
+       -0.03593388774776  A3 B4 X5 B6 A7
+       -0.03593388774776  B3 A4 X5 A6 B7
+
+Singlet state  2 energy:        -75.74318648562253
+
+       -0.69755989963103  X3 X4 B5 A6
+       -0.69755989963103  X3 X4 A5 B6
+        0.06715836478646  B3 X4 A5 A6 B7
+        0.06715836478646  A3 X4 B5 B6 A7
+       -0.05290490434655  B3 X4 B5 A6 A7
+       -0.05290490434655  A3 X4 A5 B6 B7
+        0.04994631116216  X4 A5 B6 X7
+        0.04994631116216  X4 B5 A6 X7
+        0.03925929560474  X3 A4 B5 X7
+        0.03925929560474  X3 B4 A5 X7
+        0.02835832567997  B3 A4 B5 X6 A7
+        0.02835832567997  A3 B4 A5 X6 B7
+
+Singlet state  3 energy:        -75.66971239570766
+
+        0.69698883416496  X3 X4 A5 B7
+        0.69698883416496  X3 X4 B5 A7
+       -0.06200984611489  X3 B4 A5 B6 A7
+       -0.06200984611489  X3 A4 B5 A6 B7
+       -0.06082775391361  B3 X4 A5 X6
+       -0.06082775391361  A3 X4 B5 X6
+       -0.05503679977479  X3 B4 B5 A6 A7
+       -0.05503679977479  X3 A4 A5 B6 B7
+        0.03449926258668  B3 A4 A5 B6 X7
+        0.03449926258668  A3 B4 B5 A6 X7
+        0.03087755277041  X3 B5 X6 A7
+        0.03087755277041  X3 A5 X6 B7
+        0.02114153262325  X4 A5 X6 B7
+        0.02114153262325  X4 B5 X6 A7
+
+Triplet state  1 energy:        -75.76590660018117
+
+       -0.69972493087639  X3 X4 A5 B6
+        0.69972493087639  X3 X4 B5 A6
+       -0.05313833435885  A3 X4 A5 B6 B7
+        0.05313833435885  B3 X4 B5 A6 A7
+        0.04747686775348  X4 A5 B6 X7
+       -0.04747686775348  X4 B5 A6 X7
+       -0.04617440505012  X3 A4 B5 X7
+        0.04617440505012  X3 B4 A5 X7
+       -0.03152520856437  A3 X4 B5 B6 A7
+        0.03152520856437  B3 X4 A5 A6 B7
+        0.03072688384267  A3 B4 A5 X6 B7
+       -0.03072688384267  B3 A4 B5 X6 A7
+       -0.02276531198919  A3 X4 B5 A6 B7
+        0.02276531198919  B3 X4 A5 B6 A7
+
+Triplet state  2 energy:        -75.69502798248955
+
+       -0.69067093956561  X3 A4 X5 B6
+        0.69067093956561  X3 B4 X5 A6
+       -0.12029487285562  A3 X4 X5 B7
+        0.12029487285562  B3 X4 X5 A7
+        0.06357249344039  B3 B4 X5 A6 A7
+       -0.06357249344039  A3 A4 X5 B6 B7
+        0.05246758677019  A4 X5 B6 X7
+       -0.05246758677019  B4 X5 A6 X7
+        0.03463712539207  B3 A4 X5 A6 B7
+       -0.03463712539207  A3 B4 X5 B6 A7
+       -0.02038831011859  B3 X5 X6 A7
+        0.02038831011859  A3 X5 X6 B7
+
+Triplet state  3 energy:        -75.68744391453561
+
+       -0.69647397639733  X3 X4 A5 B7
+        0.69647397639733  X3 X4 B5 A7
+        0.07678780090500  B3 X4 A5 X6
+       -0.07678780090500  A3 X4 B5 X6
+        0.05200032267322  X3 A4 A5 B6 B7
+       -0.05200032267322  X3 B4 B5 A6 A7
+       -0.04769418661965  X3 A4 B5 A6 B7
+        0.04769418661965  X3 B4 A5 B6 A7
+       -0.03672245032458  B3 A4 A5 B6 X7
+        0.03672245032458  A3 B4 B5 A6 X7
+        0.02855026864842  X3 B5 X6 A7
+       -0.02855026864842  X3 A5 X6 B7
+       -0.02522246213988  X4 A5 X6 B7
+        0.02522246213988  X4 B5 X6 A7
+        0.02081366622055  X3 B4 A5 A6 B7
+       -0.02081366622055  X3 A4 B5 B6 A7
+
+  Root   Mult.   Total Energy (a.u.)   Ex. Energy (a.u.)     Ex. Energy (eV)     Ex. Energy (nm)
+-------------------------------------------------------------------------------------------------
+     1  singlet        -75.96706600
+     2  triplet        -75.76590660          0.20115940          5.47382480        226.50381639
+     3  singlet        -75.74318649          0.22387951          6.09207047        203.51737777
+     4  triplet        -75.69502798          0.27203801          7.40252980        167.48898564
+     5  triplet        -75.68744391          0.27962208          7.60890275        162.94625484
+     6  singlet        -75.66971240          0.29735360          8.09140185        153.22959235
+
+Singlet state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1     0.0000     1.9395    -0.0000     1.9395
+     2     0.0000     0.1706     0.0000     0.1706
+     3    -0.0000     0.2420    -0.0000     0.2420
+
+Triplet state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1     0.0000     0.1584    -0.0000     0.1584
+     2     0.0000    -0.0886     0.0000     0.0886
+     3    -0.0000     0.1747     0.0000     0.1747
+
+Singlet state electronic transitions:
+
+ Transition      Tx        Ty        Tz       |T|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2    -0.0000   -0.0000   -0.2145    0.2145    0.0069
+   1 ->  3    -0.0000   -0.0000   -0.0000    0.0000    0.0000
+   2 ->  3    -1.5102   -0.0000   -0.0000    1.5102    0.1117
+
+Triplet state electronic transitions:
+
+ Transition      Tx        Ty        Tz       |T|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2     0.0000    0.0000    0.1161    0.1161    0.0006
+   1 ->  3     1.5319    0.0000   -0.0000    1.5319    0.1228
+   2 ->  3     0.0000    0.0000    0.0000    0.0000    0.0000
+
+Building Xtilde...
+
+Building Z-vector RHS...
+
+AinvB:
+     -0.45052427       0.10803129       0.14923370       0.10989978       0.08335950 
+      0.10803129      -0.57189498       0.23027931       0.11789452       0.11568986 
+      0.14923370       0.23027931      -0.67576517       0.15565823       0.14059393 
+      0.10989978       0.11789452       0.15565823      -0.62342986       0.23997733 
+      0.08335950       0.11568986       0.14059393       0.23997733      -0.57962063 
+
+Solving CPSCF equations
+Using DIIS solver
+
+ Iter         Residual      
+------  --------------------
+    1      0.099789851834
+    2      0.041201151731
+    3      0.006125635291
+    4      0.000619326917
+    5      0.000040921120
+    6      0.000007780480
+    7      0.000000663407
+    8      0.000000052904
+    9      0.000000003059
+
+CPSCF converged
+
+Xpq:
+       0.0000000       -0.0000000        0.0000000       -0.0011113        0.0000000        0.0113139        0.0000000       -0.0000000        0.0012930        0.0000000       -0.0115302       -0.0000000       -0.0003559 
+       0.0000000        0.0000000        0.0000000        0.0063315       -0.0000000        0.0359662       -0.0000000        0.0000000        0.0040579        0.0000000       -0.0041357       -0.0000000        0.0272950 
+      -0.0000000       -0.0000000        0.0000000        0.0000000       -0.0000000       -0.0000000       -0.0000000        0.0022668       -0.0000000        0.0000000        0.0000000       -0.0285180        0.0000000 
+       0.0011113       -0.0063315       -0.0000000        0.0000000        0.0000000       -0.0000000        0.0000000       -0.0000000        0.0825117        0.0000000        0.0874565        0.0000000       -0.0239786 
+      -0.0000000        0.0000000        0.0000000       -0.0000000        0.0000000       -0.0000000        0.0000000       -0.0000000       -0.0000000        0.1473297        0.0000000        0.0000000       -0.0000000 
+      -0.0113139       -0.0359662        0.0000000        0.0000000        0.0000000        0.0000000       -0.0000000       -0.0000000        0.1039859       -0.0000000        0.0198613        0.0000000       -0.0340030 
+      -0.0000000        0.0000000        0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000       -0.0315269        0.0000000       -0.0000000        0.0000000        0.0254886       -0.0000000 
+       0.0000000       -0.0000000       -0.0022668        0.0000000        0.0000000        0.0000000        0.0315269        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+      -0.0012930       -0.0040579        0.0000000       -0.0825117        0.0000000       -0.1039859       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+      -0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.1473297        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+       0.0115302        0.0041357       -0.0000000       -0.0874565       -0.0000000       -0.0198613       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+       0.0000000        0.0000000        0.0285180       -0.0000000       -0.0000000       -0.0000000       -0.0254886        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+       0.0003559       -0.0272950       -0.0000000        0.0239786        0.0000000        0.0340030        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+
+Zpq:
+       0.0000000        0.0000000        0.0000000       -0.0000004        0.0000000        0.0003669        0.0000000       -0.0000000       -0.0000720        0.0000000       -0.0001648       -0.0000000        0.0005032 
+       0.0000000        0.0000000        0.0000000        0.0096332       -0.0000000        0.0433884        0.0000000       -0.0000000        0.0057483       -0.0000000       -0.0093964        0.0000000       -0.0023478 
+       0.0000000        0.0000000        0.0000000        0.0000000       -0.0000000        0.0000000        0.0406257       -0.0037334       -0.0000000       -0.0000000        0.0000000        0.0123368       -0.0000000 
+      -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000       -0.0127570        0.0000000        0.0000000        0.0545785        0.0000000        0.0421172        0.0000000       -0.0138540 
+       0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000       -0.0000000        0.0000000        0.0904686        0.0000000        0.0000000       -0.0000000 
+       0.0000000        0.0000000        0.0000000       -0.0000000        0.0000000        0.0000000       -0.0000000        0.0000000        0.1161835        0.0000000        0.0194873       -0.0000000       -0.0196663 
+       0.0000000        0.0000000        0.0000000        0.0000000        0.0000000       -0.0000000        0.0000000       -0.0346652        0.0000000        0.0000000        0.0000000        0.0153650       -0.0000000 
+      -0.0000000       -0.0000000       -0.0000000        0.0000000       -0.0000000        0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+      -0.0000000        0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+       0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+      -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+      -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+       0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+
+Building X...
+
+Xpq (2):
+     -41.4533227       -0.0098155       -0.0000000        0.0039186       -0.0000000        0.0014125       -0.0000000        0.0000000        0.0014966       -0.0000000        0.0034273        0.0000000       -0.0104632 
+       0.0000000       -2.8064429       -0.0000000       -0.0111192        0.0000000       -0.0440746       -0.0000000        0.0000000       -0.0082598        0.0000000        0.0135018       -0.0000000        0.0033736 
+      -0.0000000        0.0000000       -1.4818037        0.0000000        0.0000000        0.0000000       -0.0707040        0.0026744        0.0000000        0.0000000       -0.0000000       -0.0088375        0.0000000 
+       0.0000000        0.0000000       -0.0000000       -1.3724004       -0.0000000       -0.0527406       -0.0000000       -0.0000000       -0.0330252       -0.0000000       -0.0254850       -0.0000000        0.0083830 
+      -0.0000000       -0.0000000       -0.0000000        0.0000000       -0.7143703       -0.0000000       -0.0000000        0.0000000       -0.0000000       -0.0459579       -0.0000000       -0.0000000        0.0000000 
+      -0.0000000       -0.0000000        0.0000000       -0.0000000        0.0000000       -0.2120943       -0.0000000        0.0000000        0.0023283        0.0000000        0.0003905       -0.0000000       -0.0003941 
+      -0.0000000        0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0246996       -0.0039811        0.0000000        0.0000000        0.0000000        0.0017646       -0.0000000 
+       0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+      -0.0000000       -0.0000000        0.0000000       -0.0000000        0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+      -0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+       0.0000000        0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+       0.0000000        0.0000000        0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+       0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+
+Zpq (2):
+       0.0000000        0.0000000        0.0000000       -0.0000004        0.0000000        0.0003669        0.0000000       -0.0000000       -0.0000720        0.0000000       -0.0001648       -0.0000000        0.0005032 
+       0.0000000        0.0000000        0.0000000        0.0096332       -0.0000000        0.0433884        0.0000000       -0.0000000        0.0057483       -0.0000000       -0.0093964        0.0000000       -0.0023478 
+       0.0000000        0.0000000       -0.0106369        0.0000000       -0.0000000        0.0000000        0.0406257       -0.0037334       -0.0000000       -0.0000000        0.0000000        0.0123368       -0.0000000 
+      -0.0000000        0.0000000        0.0000000       -0.0051610        0.0000000       -0.0127570        0.0000000        0.0000000        0.0545785        0.0000000        0.0421172        0.0000000       -0.0138540 
+       0.0000000       -0.0000000       -0.0000000        0.0000000       -0.0084461        0.0000000        0.0000000       -0.0000000        0.0000000        0.0904686        0.0000000        0.0000000       -0.0000000 
+       0.0000000        0.0000000        0.0000000       -0.0000000        0.0000000        0.0167496       -0.0000000        0.0000000        0.1161835        0.0000000        0.0194873       -0.0000000       -0.0196663 
+       0.0000000        0.0000000        0.0000000        0.0000000        0.0000000       -0.0000000        0.0074944       -0.0346652        0.0000000        0.0000000        0.0000000        0.0153650       -0.0000000 
+      -0.0000000       -0.0000000       -0.0000000        0.0000000       -0.0000000        0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+      -0.0000000        0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+       0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+      -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+      -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+       0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0000000       -0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000        0.0000000 
+
+
+Total CASCI Time
+----------------------------
+ Total Time:       0.15 sec
+----------------------------
+
+Writing out molden info
+
+Gradient units are Hartree/Bohr
+---------------------------------------------------
+        dE/dX            dE/dY            dE/dZ
+    0.0000000000     0.0417008211    -0.0000000000
+   -0.0408665800    -0.0208504106     0.0000000000
+    0.0408665800    -0.0208504106     0.0000000000
+---------------------------------------------------
+Net gradient:  4.440892e-16  2.169376e-13 -1.028813e-19
+Net torque:    9.951142e-13 -6.793972e-15  3.679747e-13
+
+Total processing time: 0.23 sec 
+
+ Job finished: Sun Dec 10 22:36:06 2017
+

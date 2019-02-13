@@ -1,0 +1,6 @@
+Code polarizable Geometry
+Make RHF respect polarizable Geometry
+Standardize wavefunction properties
+Make CIS gradients faster
+Code CIS couplings
+CASCI overlaps with swapped orbitals (Works numerically - need to think about correspondence)

@@ -1,0 +1,34 @@
+guess           	sad
+gpus            	1
+
+basis           	6-31gss
+method                  HF
+convthre                1e-6
+threall                 1e-13
+threspdp                1e-5
+maxit                   200
+precision               mixed
+charge                  -1
+spinmult                1
+
+run             	coupling
+
+coordinates             hbdi.xyz
+
+fon_method              gaussian
+fon                     yes
+fon_anneal              no
+fon_target              0.3
+fon_temperature         0.3
+casci                   yes
+# castarget               1
+castargetmult           3
+nacstate1               1
+nacstate2               2
+cassinglets             3
+castriplets             3
+closed                  54
+active                  6
+
+cphftol 1e-6
+

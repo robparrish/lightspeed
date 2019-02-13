@@ -1,0 +1,9 @@
+Demonstrates ab initio scattering in ethylene (only valence states).
+
+The molecule must be oriented so that the transition dipole at t=0 is in z
+(this is obviously the case here).
+
+To run:
+ml lightspeed
+setenv PYTHONPATH $LIGHTSPEED_ROOT/apps/aiscat:$PYTHONPATH
+python fomo_casci.py

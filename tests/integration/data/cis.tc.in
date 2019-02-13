@@ -1,0 +1,27 @@
+# => Problem Geometry <= #    
+
+coordinates     hbdi.xyz
+charge          -1
+basis           6-31g**
+
+# => Tasking <= #
+
+method          hf
+run             gradient
+cis             yes
+cismult         3
+cistarget       2
+cisnumstates    3
+cisguessvecs    3
+
+# => Thresholds/Algorithms <= #
+
+cisincremental  yes
+cismaxiter      50
+cisconvtol      1.0e-6
+cismax          200
+precision       mixed
+threall         1.0e-14
+convthre        1.0e-6
+threspdp        1.0e-5
+gpus            2

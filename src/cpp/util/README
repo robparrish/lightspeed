@@ -1,0 +1,12 @@
+Headers (Internal):
+
+string.h - provides sprintf2, which prints into a dynamically allocated
+    std::string object.
+atomic_gpu.h - provides atomicAdd(double*, double) to emulate double-precision
+    atomics for CUDA architectures prior to Pascal.
+cuerr.h - provides CUERR; macro to be placed after synchronous CUDA calls to
+    check for errors and print/die if any are found.
+
+Implementation:
+
+string.cpp - sprintf2 implementation

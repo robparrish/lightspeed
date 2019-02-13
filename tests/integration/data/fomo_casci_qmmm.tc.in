@@ -1,0 +1,21 @@
+prmtop          ../system/system.prmtop
+coordinates     ../system/system.rst
+qmindices       ../system/system.qm
+charge          -1
+basis           6-31g
+
+method          hf
+run             gradient
+
+fon                     yes
+fon_anneal              no
+fon_target              0.2
+fon_temperature         0.2
+casci                   yes
+castarget               0
+castargetmult           1
+cassinglets             2
+closed                  107
+active                  3
+
+dci_explicit_h          yes

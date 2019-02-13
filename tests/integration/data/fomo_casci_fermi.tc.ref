@@ -1,0 +1,2681 @@
+S0 Gradient:
+
+Startfile from command line: tc.in
+
+
+       ***********************************************************
+       *                    TeraChem v1.9-2017.12-dev            *
+       *                 Hg Version: c1092a6a9743                *
+       *                   Development Version                   *
+       *                Compiled without textures                *
+       *           Chemistry at the Speed of Graphics!           *
+       ***********************************************************
+       * This program may only be used in connection with        *
+       * a valid license from PetaChem, LLC. Use of this program *
+       * or results thereof indicates acceptance of all terms    *
+       * and conditions stated in the license and that a valid   *
+       * license agreement between the user and PetaChem, LLC    *
+       * exists. PetaChem, LLC does not warrant the correctness  *
+       * of results or their suitability for any purpose.        *
+       * Please email bugs, suggestions, and comments to         *
+       *                  help@petachem.com                      *
+       *                                                         *
+       ***********************************************************
+
+
+       ***********************************************************
+       *  Compiled by jenkins      Mon Dec  4 05:35:34 PST 2017  *
+       *  Supported architectures: sm_30 sm_35 sm_52 sm_61       *
+       *  Cuda compilation tools, release 8.0, V8.0.44           *
+       ***********************************************************
+
+
+ Job started   Mon Dec 11 13:38:08 2017
+ On fire-12-04 (available memory: 265962 MB)
+
+######################################### RUNTIME INFO ##########################################
+terachem tc.in 
+
+NVRM version: NVIDIA UNIX x86_64 Kernel Module  384.27  Sun May 21 00:39:55 PDT 2017
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+
+	linux-vdso.so.1 =>  (0x00007ffd967b7000)
+	libcurl.so.4 => /usr/lib64/libcurl.so.4 (0x00007f64c292d000)
+	libdftbplus.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libdftbplus.so (0x00007f64c240d000)
+	libfsockets.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libfsockets.so (0x00007f64c2209000)
+	libxmlf90.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libxmlf90.so (0x00007f64c1fe3000)
+	libOpenMM.so => /global/software/OpenMM/7.1-intel-2016.0.109-CUDA-8.0.44/lib/libOpenMM.so (0x00007f64c1a21000)
+	libprotobuf.so.12 => /global/software/protobuf/3.2.0-intel-2016.0.109/lib/libprotobuf.so.12 (0x00007f64c14b7000)
+	libintbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libintbox.so.1 (0x00007f64a35e5000)
+	libthcbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libthcbox.so.1 (0x00007f64a1af5000)
+	libgridbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libgridbox.so.1 (0x00007f64a1623000)
+	libdftbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libdftbox.so.1 (0x00007f64a133d000)
+	libcuda.so.1 => /usr/lib64/libcuda.so.1 (0x00007f64a0522000)
+	libcudart.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcudart.so.8.0 (0x00007f64a02bc000)
+	libcublas.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcublas.so.8.0 (0x00007f649d90b000)
+	libcufft.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcufft.so.8.0 (0x00007f6494abd000)
+	libcrypto.so.10 => /usr/lib64/libcrypto.so.10 (0x00007f64946d3000)
+	libssl.so.10 => /usr/lib64/libssl.so.10 (0x00007f6494464000)
+	libm.so.6 => /usr/lib64/libm.so.6 (0x00007f6494162000)
+	libcilkrts.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libcilkrts.so.5 (0x00007f6493f21000)
+	libstdc++.so.6 => /usr/lib64/libstdc++.so.6 (0x00007f6493c17000)
+	libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x00007f6493a01000)
+	libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x00007f64937e5000)
+	libc.so.6 => /usr/lib64/libc.so.6 (0x00007f6493423000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f64c2ba9000)
+	libdl.so.2 => /usr/lib64/libdl.so.2 (0x00007f649321f000)
+	libidn.so.11 => /usr/lib64/libidn.so.11 (0x00007f6492fec000)
+	libssh2.so.1 => /usr/lib64/libssh2.so.1 (0x00007f6492dc1000)
+	libssl3.so => /usr/lib64/libssl3.so (0x00007f6492b75000)
+	libsmime3.so => /usr/lib64/libsmime3.so (0x00007f649294e000)
+	libnss3.so => /usr/lib64/libnss3.so (0x00007f6492623000)
+	libnssutil3.so => /usr/lib64/libnssutil3.so (0x00007f64923f6000)
+	libplds4.so => /usr/lib64/libplds4.so (0x00007f64921f2000)
+	libplc4.so => /usr/lib64/libplc4.so (0x00007f6491fec000)
+	libnspr4.so => /usr/lib64/libnspr4.so (0x00007f6491dae000)
+	libgssapi_krb5.so.2 => /usr/lib64/libgssapi_krb5.so.2 (0x00007f6491b60000)
+	libkrb5.so.3 => /usr/lib64/libkrb5.so.3 (0x00007f6491878000)
+	libk5crypto.so.3 => /usr/lib64/libk5crypto.so.3 (0x00007f6491646000)
+	libcom_err.so.2 => /usr/lib64/libcom_err.so.2 (0x00007f6491442000)
+	liblber-2.4.so.2 => /usr/lib64/liblber-2.4.so.2 (0x00007f6491232000)
+	libldap-2.4.so.2 => /usr/lib64/libldap-2.4.so.2 (0x00007f6490fdf000)
+	libz.so.1 => /usr/lib64/libz.so.1 (0x00007f6490dc9000)
+	libmkl_intel_lp64.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_intel_lp64.so (0x00007f649048a000)
+	libmkl_intel_thread.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_intel_thread.so (0x00007f648f133000)
+	libmkl_core.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_core.so (0x00007f648d84e000)
+	libiomp5.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libiomp5.so (0x00007f648d50c000)
+	libifport.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libifport.so.5 (0x00007f648d2dd000)
+	libifcoremt.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libifcoremt.so.5 (0x00007f648cf4a000)
+	libimf.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libimf.so (0x00007f648ca52000)
+	libsvml.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libsvml.so (0x00007f648bb93000)
+	libintlc.so.5 => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libintlc.so.5 (0x00007f648b933000)
+	librt.so.1 => /usr/lib64/librt.so.1 (0x00007f648b72b000)
+	libirng.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libirng.so (0x00007f648b523000)
+	libnvidia-fatbinaryloader.so.384.27 => /usr/lib64/libnvidia-fatbinaryloader.so.384.27 (0x00007f648b2d0000)
+	libkrb5support.so.0 => /usr/lib64/libkrb5support.so.0 (0x00007f648b0c0000)
+	libkeyutils.so.1 => /usr/lib64/libkeyutils.so.1 (0x00007f648aebc000)
+	libresolv.so.2 => /usr/lib64/libresolv.so.2 (0x00007f648aca2000)
+	libsasl2.so.3 => /usr/lib64/libsasl2.so.3 (0x00007f648aa84000)
+	libselinux.so.1 => /usr/lib64/libselinux.so.1 (0x00007f648a85d000)
+	libcrypt.so.1 => /usr/lib64/libcrypt.so.1 (0x00007f648a625000)
+	libpcre.so.1 => /usr/lib64/libpcre.so.1 (0x00007f648a3c4000)
+	libfreebl3.so => /usr/lib64/libfreebl3.so (0x00007f648a1c1000)
+#################################################################################################
+
+Cannot find license.dat file in the TeraChem installation directory /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1
+
+
+TRYING THE NETWORK LICENSE...
+Connecting to license server '54.208.252.40' port '8877'...
+Connected!
+Checking your license...
+
+**************************************************************
+  Greetings, Martinez Group! You have 1000 licenses in total
+  IN USE: 41
+  AVAILABLE: 959
+**************************************************************
+
+Scratch directory: ./scr
+Random number seed: 16245449
+
+XYZ coordinates hbdi.xyz
+Molden File Output: ./scr/hbdi.molden
+Using basis set: 6-31gss
+Spin multiplicity: 1
+DIIS will use up to 10 vectors.
+WF convergence threshold: 1.00e-06
+Using DIIS algorithm to converge WF
+Maximum number of SCF iterations: 200
+Incremental fock with rebuild every 8 iterations
+Will switch to conventional Fock if diffuse functions are detected
+X-matrix tolerance: 1.00e-04
+PRECISION: MIXED
+Single/Double precision threshold: 1.00e-05
+Using fractional orbital occupations
+Fractional occupations determined from the Fermi-Dirac distribution
+54 occupied orbitals will have integer occupation
+6 occupied orbitals will have fractional occupation
+kT is set to  0.300 a.u.
+DFT Functional requested: hf
+Method: Hartree-Fock 
+Wavefunction: RESTRICTED
+Initial guess generated from superposition of atomic densities generated with HF,
+using spherically symmetric atomic densities and averaged alpha and beta spin densities.
+
+********************************************
+**** SINGLE POINT GRADIENT CALCULATIONS ****
+********************************************
+SCF:   Initial guess is taken from previous step
+
+using 1 out of 1 CUDA devices
+   Device 0:      GeForce GTX 970,  4037MB, CC 5.2 -- CPU THREAD 0
+-------------------------------------------------------------------
+Compiled with MAGMA support.  MAGMA parameters:
+    Matrices larger than 5000 square will be treated with MAGMA
+       (Change by setting the MagmaMinN environment variable)
+    Magma will use 1 out of 1 GPUs
+       (Change by setting the MagmaNGPUs environment variable)
+-------------------------------------------------------------------
+ CPU Memory Available: 48347.00 MegaWords 
+ GPU Memory Available: 248.67 MegaWords 
+ Maximum recommended basis set size: 5100 basis functions
+ (limited by GPU memory)
+-------------------------------------------------------------------
+Using d-functions. Configuring GPUs accordingly.
+0: CUBLAS initialized, available GPU memory: 2067MB
+
+
+Basis set:       6-31gss
+Total atoms:     27
+Total charge:    -1
+Total electrons: 114 (57-alpha, 57-beta)
+Number electrons modeled by ECPs: 0
+Total orbitals:  295
+Total AO shells: 129 (70 S-shells; 43 P-shells; 16 D-shells; 0 F-shells; 0 G-shells)
+Spin multiplicity: 1
+Nuclear repulsion energy (QM atoms): 987.768005641529 a.u.
+
+Using neutral atomic charges and default spins and spin directions.
+Number of unique atoms is: 4 
+Atom #1 is unique. Calculating atomic density. 
+Atom #3 is unique. Calculating atomic density. 
+Atom #6 is unique. Calculating atomic density. 
+Atom #17 is unique. Calculating atomic density. 
+
+                      *** Start SCF Iterations ***
+
+ Iter     DIIS Error       Energy change         Energy        Time(s)
+------------------------------------------------------------------------
+Initial temperature is 0.300000
+         >>> Purifying P... IDMP = 2.41e-01 <<<
+         >>> Purifying P... IDMP = 2.36e-01 <<<
+         >>> Purifying P... IDMP = 2.36e-01 <<<
+         >>> Purifying P... IDMP = 2.07e-01 <<<
+         >>> Purifying P... IDMP = 1.71e-01 <<<
+         >>> Purifying P... IDMP = 1.37e-01 <<<
+         >>> Purifying P... IDMP = 9.86e-02 <<<
+         >>> Purifying P... IDMP = 6.25e-02 <<<
+         >>> Purifying P... IDMP = 3.00e-02 <<<
+         >>> Purifying P... IDMP = 7.37e-03 <<<
+         >>> Purifying P... IDMP = 4.22e-04 <<<
+         >>> Purifying P... IDMP = 1.26e-06 <<<
+         >>> Purifying P... IDMP = 9.84e-12 <<<
+         >>> Purifying P... IDMP = 1.22e-15 <<<
+   1     0.4136168436    -716.0246346954    -716.0246346954     0.82  
+   2     0.2542051655      +1.5504362313    -714.4741984641     0.85  
+   3     0.3261321250      -0.2491636734    -714.7233621375     0.85  
+   4     0.1807507760      -2.9126686756    -717.6360308131     0.83  
+   5     0.1164890830      -0.0596033397    -717.6956341527     0.79  
+   6     0.0397936903      -0.9607270382    -718.6563611909     0.74  
+   7     0.0165528787      -0.0420210174    -718.6983822083     0.64  
+   8     0.0065589242      +0.0067801817    -718.6916020266     0.59  
+   9     0.0039333146      -0.0002771479    -718.6918791745     0.85  
+  10     0.0014373324      -0.0005815894    -718.6924607639     0.49  
+  11     0.0005213080      -0.0001121842    -718.6925729482     0.47  
+  12     0.0001882860      +0.0000049633    -718.6925679848     0.43  
+  13     0.0000897211      +0.0000710801    -718.6924969047     0.37  
+  14     0.0000579267      +0.0000406201    -718.6924562847     0.35  
+  15     0.0000266726      +0.0000206267    -718.6924356580     0.34  
+  16     0.0000113787      -0.0000036357    -718.6924392937     0.31  
+  17     0.0000034733      +0.0000004257    -718.6924388680     0.86  
+  18     0.0000020591      +0.0000003977    -718.6924384703     0.26  
+  19     0.0000008989      -0.0000000770    -718.6924385473     0.21  
+------------------------------------------------------------------------
+FINAL ENERGY: -718.6924385473 a.u.
+WARNING: Final energy is higher than the lowest energy by    0.0059437.
+Fractional Occupation Entropy: 7.9586303000
+Mermin Free Energy:            -721.0800276373
+CENTER OF MASS: {51.855101, 22.264033, -32.026343} ANGS
+DIPOLE MOMENT: {0.247914, 1.952000, -5.817848} (|D| = 6.141590) DEBYE
+
+Running Mulliken population analysis...
+
+
+  Active Space Parameters
+--------------------------------------------
+Number of closed orbitals:              54
+Number of active orbitals:               6
+Number of virtual orbitals:            235
+Number of molecular orbitals:          295
+Number of basis functions:             295
+Number of active electrons:              6
+Number of alpha electrons:               3
+Number of beta electrons:                3
+
+  Orbital      Energy        Occupation
+-----------------------------------------
+     53       -0.267732        1.000000
+     54       -0.256353        1.000000
+     55       -0.140206        0.649493
+     56       -0.119542        0.633656
+     57       -0.025359        0.558231
+     58        0.114087        0.442547
+     59        0.186995        0.383703
+     60        0.254082        0.332371
+     61        0.333443        0.000000
+     62        0.335817        0.000000
+
+  CAS Parameters
+--------------------------------------------
+Number of determinants:                400
+Number of singlet CSFs:                175
+Number of doublet CSFs:                  0
+Number of triplet CSFs:                189
+Number of quartet CSFs:                  0
+Number of quintet CSFs:                 35
+Number of sextet CSFs:                   0
+Number of septet CSFs:                   1
+Number of singlet states:                3
+Number of doublet states:                0
+Number of triplet states:                3
+Number of quartet states:                0
+Number of quintet states:                0
+Number of sextet states:                 0
+Number of septet states:                 0
+
+Singlet state  1 energy:       -719.50696300923323
+
+       -0.93737250110126  X55 X56 X57
+       -0.18139846627056  X55 X56 B57 A58
+       -0.18139846627056  X55 X56 A57 B58
+        0.10787574138748  X55 X56 X58
+        0.10555875452477  X56 X57 X59
+        0.07956317403759  X55 X57 X58
+        0.05079783841522  X55 X56 X60
+        0.04278315449558  A55 B56 X57 A58 B59
+        0.04278315449558  B55 A56 X57 B58 A59
+        0.03240901763670  X55 A56 B57 X58
+        0.03240901763670  X55 B56 A57 X58
+       -0.03210981487244  X55 B56 A57 A58 B60
+       -0.03210981487244  X55 A56 B57 B58 A60
+        0.03187744516387  X55 X57 X60
+        0.03097029688507  X55 X56 X59
+       -0.03078139666214  X55 A56 B57 X60
+       -0.03078139666214  X55 B56 A57 X60
+        0.02633398033660  A55 B56 X57 B58 A59
+        0.02633398033660  B55 A56 X57 A58 B59
+        0.02607815233014  B55 X56 A57 B58 A59
+        0.02607815233014  A55 X56 B57 A58 B59
+        0.02402603202880  X55 B56 X57 A60
+        0.02402603202880  X55 A56 X57 B60
+        0.02208103297061  X55 A56 B57 X59
+        0.02208103297061  X55 B56 A57 X59
+        0.02091783864423  X56 A57 B58 X59
+        0.02091783864423  X56 B57 A58 X59
+        0.02081981985701  X55 A56 A57 B58 B60
+        0.02081981985701  X55 B56 B57 A58 A60
+
+Singlet state  2 energy:       -719.36574704445002
+
+        0.57810648419857  X55 X56 B57 A58
+        0.57810648419857  X55 X56 A57 B58
+       -0.23927339344105  X55 X56 X57
+        0.19488925170570  X55 B56 X57 A58
+        0.19488925170570  X55 A56 X57 B58
+       -0.18309690469164  X55 A56 B57 X58
+       -0.18309690469164  X55 B56 A57 X58
+        0.11780575820613  X55 X56 A57 B60
+        0.11780575820613  X55 X56 B57 A60
+       -0.09864003072882  B55 X56 A57 A58 B59
+       -0.09864003072882  A55 X56 B57 B58 A59
+        0.09619787304134  X55 X56 X58
+       -0.08071100256204  X55 X57 X58
+       -0.07442019976915  X56 A57 B58 X59
+       -0.07442019976915  X56 B57 A58 X59
+       -0.07095049604562  B55 X56 X57 A59
+       -0.07095049604562  A55 X56 X57 B59
+        0.06704526227383  X55 X56 X59
+       -0.05458149738953  X55 X56 X60
+        0.05428268300906  B55 X56 B57 A58 A59
+        0.05428268300906  A55 X56 A57 B58 B59
+       -0.04848733288694  B55 A56 X57 A58 B59
+       -0.04848733288694  A55 B56 X57 B58 A59
+       -0.04435734771976  B55 X56 A57 B58 A59
+       -0.04435734771976  A55 X56 B57 A58 B59
+        0.03901612049391  X55 A56 B57 X59
+        0.03901612049391  X55 B56 A57 X59
+       -0.03625143587055  X55 B57 A58 X60
+       -0.03625143587055  X55 A57 B58 X60
+        0.02890032134521  A55 A56 X57 B58 B59
+        0.02890032134521  B55 B56 X57 A58 A59
+       -0.02852736142643  A55 B56 A57 X58 B59
+       -0.02852736142643  B55 A56 B57 X58 A59
+       -0.02756789007613  X55 X56 B58 A60
+       -0.02756789007613  X55 X56 A58 B60
+       -0.02654606954115  X55 A56 B57 A58 B60
+       -0.02654606954115  X55 B56 A57 B58 A60
+       -0.02523291890383  X55 B56 B57 A58 A60
+       -0.02523291890383  X55 A56 A57 B58 B60
+       -0.02410807378204  B56 X57 A58 X59
+       -0.02410807378204  A56 X57 B58 X59
+        0.02351156823992  B56 A57 X58 X59
+        0.02351156823992  A56 B57 X58 X59
+       -0.02115261963857  A55 B56 B57 X58 A59
+       -0.02115261963857  B55 A56 A57 X58 B59
+        0.02058323154810  X55 X57 X60
+        0.02031493777714  X55 A56 B58 X60
+        0.02031493777714  X55 B56 A58 X60
+
+Singlet state  3 energy:       -719.31089966320383
+
+        0.63519843267716  X55 X56 X58
+       -0.37682417172006  X55 A56 X57 B58
+       -0.37682417172006  X55 B56 X57 A58
+       -0.25983785164329  X55 X56 A57 B60
+       -0.25983785164329  X55 X56 B57 A60
+       -0.13088255090660  X55 X57 X58
+        0.12697146463283  X55 X56 B57 A58
+        0.12697146463283  X55 X56 A57 B58
+       -0.11943601044196  X55 A56 X57 B60
+       -0.11943601044196  X55 B56 X57 A60
+        0.10863326734479  X55 X56 B58 A60
+        0.10863326734479  X55 X56 A58 B60
+       -0.08178899321677  X55 X56 X60
+       -0.07577295271082  X56 X58 X59
+        0.06010834969448  X55 B56 B57 A58 A60
+        0.06010834969448  X55 A56 A57 B58 B60
+       -0.05288004785684  X55 B56 A57 X58
+       -0.05288004785684  X55 A56 B57 X58
+        0.04904833782837  B55 X56 A57 A58 B59
+        0.04904833782837  A55 X56 B57 B58 A59
+        0.04610096003559  A55 X56 B57 A59 B60
+        0.04610096003559  B55 X56 A57 B59 A60
+        0.04441673803341  B56 X57 A58 X59
+        0.04441673803341  A56 X57 B58 X59
+       -0.03988049969971  X55 X57 A58 B60
+       -0.03988049969971  X55 X57 B58 A60
+        0.03670204183844  X55 B56 A57 B58 A60
+        0.03670204183844  X55 A56 B57 A58 B60
+       -0.03610558500482  A55 B56 B57 X58 A59
+       -0.03610558500482  B55 A56 A57 X58 B59
+        0.03563344779546  A55 X56 X57 B59
+        0.03563344779546  B55 X56 X57 A59
+       -0.03276111668981  X56 A57 X59 B60
+       -0.03276111668981  X56 B57 X59 A60
+       -0.02980489409101  B55 A56 B57 X58 A59
+       -0.02980489409101  A55 B56 A57 X58 B59
+        0.02954773473932  B55 X56 A57 B58 A59
+        0.02954773473932  A55 X56 B57 A58 B59
+       -0.02810620589044  X56 X57 X58
+       -0.02559062412361  B55 X56 X58 A59
+       -0.02559062412361  A55 X56 X58 B59
+        0.02550329255702  A55 X56 B57 B59 A60
+        0.02550329255702  B55 X56 A57 A59 B60
+       -0.02340630785604  X55 B56 A57 A58 B60
+       -0.02340630785604  X55 A56 B57 B58 A60
+        0.02244664964125  A55 X57 X58 B59
+        0.02244664964125  B55 X57 X58 A59
+       -0.02184874869870  B55 X56 X57 A58
+       -0.02184874869870  A55 X56 X57 B58
+        0.02175005405027  X55 A56 B57 X60
+        0.02175005405027  X55 B56 A57 X60
+        0.02059766747857  B55 X56 B57 A59 A60
+        0.02059766747857  A55 X56 A57 B59 B60
+
+Triplet state  1 energy:       -719.42607713445852
+
+        0.66109258769700  X55 X56 A57 B58
+       -0.66109258769700  X55 X56 B57 A58
+        0.18416511646823  X55 A56 X57 B58
+       -0.18416511646823  X55 B56 X57 A58
+       -0.08109522960546  X56 A57 B58 X59
+        0.08109522960546  X56 B57 A58 X59
+        0.06512401365199  A55 X56 X57 B59
+       -0.06512401365199  B55 X56 X57 A59
+        0.05242498064228  A55 X56 B57 A58 B59
+       -0.05242498064228  B55 X56 A57 B58 A59
+        0.04557844461703  X55 B56 X57 A60
+       -0.04557844461703  X55 A56 X57 B60
+       -0.03981599424115  B55 X56 B57 A58 A59
+        0.03981599424115  A55 X56 A57 B58 B59
+        0.03773499166728  A55 B56 X57 A58 B59
+       -0.03773499166728  B55 A56 X57 B58 A59
+       -0.03719482750804  X55 A56 A57 B58 B60
+        0.03719482750804  X55 B56 B57 A58 A60
+        0.03422767729105  X55 B57 A58 X60
+       -0.03422767729105  X55 A57 B58 X60
+        0.03219184688668  X55 X56 A57 B60
+       -0.03219184688668  X55 X56 B57 A60
+        0.02882206939570  X55 A56 B58 X60
+       -0.02882206939570  X55 B56 A58 X60
+       -0.02641426599164  A55 B56 X57 B58 A59
+        0.02641426599164  B55 A56 X57 A58 B59
+        0.02616011119263  B56 X57 A58 X59
+       -0.02616011119263  A56 X57 B58 X59
+       -0.02595244941119  A55 B56 A57 X58 B59
+        0.02595244941119  B55 A56 B57 X58 A59
+       -0.02386043757288  A55 X56 B57 B58 A59
+        0.02386043757288  B55 X56 A57 A58 B59
+       -0.02240015142672  X55 X56 A58 B60
+        0.02240015142672  X55 X56 B58 A60
+       -0.02151142255838  X55 B56 X58 A60
+        0.02151142255838  X55 A56 X58 B60
+
+Triplet state  2 energy:       -719.34610554959716
+
+       -0.47437576524049  X55 B56 X57 A58
+        0.47437576524049  X55 A56 X57 B58
+       -0.40050116163245  X55 X56 A57 B60
+        0.40050116163245  X55 X56 B57 A60
+        0.16162127754315  A55 X56 X57 B59
+       -0.16162127754315  B55 X56 X57 A59
+        0.13273033577841  X55 X56 B57 A58
+       -0.13273033577841  X55 X56 A57 B58
+       -0.12541092057319  X55 B56 X57 A60
+        0.12541092057319  X55 A56 X57 B60
+       -0.11905108932470  X55 B56 A57 X58
+        0.11905108932470  X55 A56 B57 X58
+       -0.06583078413214  X55 B56 A57 B58 A60
+        0.06583078413214  X55 A56 B57 A58 B60
+        0.06552171478719  A55 X56 B57 A58 B59
+       -0.06552171478719  B55 X56 A57 B58 A59
+       -0.06537993179569  X55 X56 A57 B59
+        0.06537993179569  X55 X56 B57 A59
+       -0.06230893921945  X55 X56 A58 B60
+        0.06230893921945  X55 X56 B58 A60
+       -0.05860121950422  A56 X57 B58 X59
+        0.05860121950422  B56 X57 A58 X59
+       -0.04947823929913  X55 A57 X58 B60
+        0.04947823929913  X55 B57 X58 A60
+       -0.04552088872137  X56 A57 X59 B60
+        0.04552088872137  X56 B57 X59 A60
+        0.04423371819190  X55 B56 A57 X60
+       -0.04423371819190  X55 A56 B57 X60
+       -0.03611092700620  B55 X56 B57 A58 A59
+        0.03611092700620  A55 X56 A57 B58 B59
+        0.03363506474478  X55 A56 A57 B58 B60
+       -0.03363506474478  X55 B56 B57 A58 A60
+        0.02986742042239  X55 A56 B58 X60
+       -0.02986742042239  X55 B56 A58 X60
+       -0.02848564644864  A55 X57 X58 B59
+        0.02848564644864  B55 X57 X58 A59
+       -0.02579618209367  X55 A56 X58 B60
+        0.02579618209367  X55 B56 X58 A60
+        0.02539391519198  B55 B56 A57 X58 A59
+       -0.02539391519198  A55 A56 B57 X58 B59
+        0.02404678030372  X55 X57 A58 B60
+       -0.02404678030372  X55 X57 B58 A60
+        0.02385484739042  X55 A56 B58 X59
+       -0.02385484739042  X55 B56 A58 X59
+       -0.02329610839167  A55 B56 X57 B59 A60
+        0.02329610839167  B55 A56 X57 A59 B60
+        0.02037474480952  A55 A56 A57 B58 B59 B60
+       -0.02037474480952  B55 B56 B57 A58 A59 A60
+       -0.02009095435967  X55 A56 B57 B58 A60
+        0.02009095435967  X55 B56 A57 A58 B60
+       -0.02003479563037  B55 X56 X57 A58
+        0.02003479563037  A55 X56 X57 B58
+
+Triplet state  3 energy:       -719.33559213942181
+
+        0.47534720610211  X55 X56 B57 A59
+       -0.47534720610211  X55 X56 A57 B59
+        0.39757378099326  B55 X56 X57 A58
+       -0.39757378099326  A55 X56 X57 B58
+        0.27163846547198  X55 B56 X57 A59
+       -0.27163846547198  X55 A56 X57 B59
+       -0.13118450749716  X55 X56 A58 B59
+        0.13118450749716  X55 X56 B58 A59
+        0.05844352314972  X55 B56 X57 A58
+       -0.05844352314972  X55 A56 X57 B58
+        0.04648974651782  X55 B56 B57 A58 A59
+       -0.04648974651782  X55 A56 A57 B58 B59
+        0.04144754106695  A55 B56 X57 X58
+       -0.04144754106695  B55 A56 X57 X58
+       -0.04031386427335  A55 X56 X57 B59
+        0.04031386427335  B55 X56 X57 A59
+        0.04022929661616  B55 X56 A58 X59
+       -0.04022929661616  A55 X56 B58 X59
+       -0.03667986329107  X55 A57 X58 B59
+        0.03667986329107  X55 B57 X58 A59
+       -0.03504806092497  A55 B56 A57 B58 X59
+        0.03504806092497  B55 A56 B57 A58 X59
+       -0.03048798229669  A55 A56 B57 B58 X59
+        0.03048798229669  B55 B56 A57 A58 X59
+        0.02993043080367  X56 X57 A58 B59
+       -0.02993043080367  X56 X57 B58 A59
+       -0.02873967282521  X55 A56 B59 X60
+        0.02873967282521  X55 B56 A59 X60
+        0.02549514579288  X55 B56 A57 B58 A59
+       -0.02549514579288  X55 A56 B57 A58 B59
+       -0.02527508475361  B55 X56 A57 B58 A60
+        0.02527508475361  A55 X56 B57 A58 B60
+       -0.02452210894531  A56 X57 X58 B59
+        0.02452210894531  B56 X57 X58 A59
+        0.02451070832403  X55 A57 B59 X60
+       -0.02451070832403  X55 B57 A59 X60
+       -0.02437079025384  A55 X57 B58 X59
+        0.02437079025384  B55 X57 A58 X59
+        0.02408212208838  X56 B57 X58 A59
+       -0.02408212208838  X56 A57 X58 B59
+       -0.02010376990804  A55 X56 B58 X60
+        0.02010376990804  B55 X56 A58 X60
+
+  Root   Mult.   Total Energy (a.u.)   Ex. Energy (a.u.)     Ex. Energy (eV)     Ex. Energy (nm)
+-------------------------------------------------------------------------------------------------
+     1  singlet       -719.50696301
+     2  triplet       -719.42607713          0.08088587          2.20101628        563.30442487
+     3  singlet       -719.36574704          0.14121596          3.84268128        322.65028419
+     4  triplet       -719.34610555          0.16085746          4.37715346        283.25308178
+     5  triplet       -719.33559214          0.17137087          4.66323786        265.87582370
+     6  singlet       -719.31089966          0.19606335          5.33515421        232.39107203
+
+Singlet state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1     1.1130     4.2432    -9.8547    10.7869
+     2     0.5340     3.6752   -10.6316    11.2616
+     3     0.6732     2.9331    -7.2818     7.8792
+
+Triplet state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1     1.4944     3.9413    -6.9121     8.0959
+     2    -0.0938     2.1275    -8.1153     8.3900
+     3     1.5081     4.6629    -9.4403    10.6365
+
+Singlet state electronic transitions:
+
+ Transition      Tx        Ty        Tz       |T|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2    -0.2665    0.7619   -4.0416    4.1214    1.5991
+   1 ->  3    -0.1526    0.0641   -0.9748    0.9887    0.1278
+   2 ->  3     0.2815    0.3848   -0.0146    0.4770    0.0083
+
+Triplet state electronic transitions:
+
+ Transition      Tx        Ty        Tz       |T|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2     0.4949    0.2168    1.6303    1.7175    0.1573
+   1 ->  3     0.3054    0.5017   -0.3196    0.6687    0.0270
+   2 ->  3    -0.0858   -0.1262    0.0359    0.1568    0.0002
+
+Building Xtilde...
+
+Building Z-vector RHS...
+
+Solving CPSCF equations
+Using DIIS solver
+
+ Iter         Residual      
+------  --------------------
+    1      0.147372910517
+    2      0.137469388611
+    3      0.032287892378
+    4      0.020705051017
+    5      0.005464494241
+    6      0.002899968789
+    7      0.001294741270
+    8      0.000544844122
+    9      0.000224067864
+   10      0.000121067932
+   11      0.000049490987
+   12      0.000029292941
+   13      0.000007643962
+   14      0.000003811949
+   15      0.000001600037
+   16      0.000000527151
+
+CPSCF converged
+
+Building X...
+
+
+Total CASCI Time
+----------------------------
+ Total Time:      41.85 sec
+----------------------------
+
+Writing out molden info
+
+Gradient units are Hartree/Bohr
+---------------------------------------------------
+        dE/dX            dE/dY            dE/dZ
+    0.0010738082     0.0023710301    -0.0033847708
+    0.0038945118     0.0102481903    -0.0173189410
+    0.0084907930     0.0015267773     0.0356932492
+    0.0080807458     0.0123321815    -0.0051867797
+    0.0135814122     0.0110451557     0.0262423078
+   -0.0316802162    -0.0369394522    -0.0212834235
+   -0.0006402558    -0.0003660671    -0.0018123932
+   -0.0007025131     0.0034350667    -0.0158492589
+   -0.0018096686    -0.0002922017    -0.0076191262
+    0.0058522471     0.0030922726     0.0174383314
+    0.0000055309     0.0035440878    -0.0124449514
+   -0.0061640846    -0.0059213967    -0.0090591814
+    0.0044158300     0.0035239035     0.0080933125
+   -0.0006067311    -0.0026636029     0.0067761810
+   -0.0094797629    -0.0018465839    -0.0390991688
+    0.0099972403     0.0010384301     0.0448557029
+   -0.0014504074    -0.0025166830     0.0022102930
+    0.0023150652     0.0047382800    -0.0056616641
+    0.0024918705     0.0029591041     0.0014120343
+   -0.0032020758    -0.0035073059    -0.0029942047
+   -0.0036007384    -0.0042377744    -0.0023440349
+    0.0003901661     0.0003650082     0.0005837299
+   -0.0027422495     0.0003708160     0.0003613835
+    0.0011424563    -0.0024973608    -0.0004341745
+   -0.0004130321     0.0010763429     0.0003693071
+   -0.0004589713    -0.0007337419     0.0004069757
+    0.0012190294    -0.0001444763     0.0000492649
+---------------------------------------------------
+Net gradient:  2.222525e-10 -9.692290e-11 -3.215000e-12
+Net torque:    6.142139e-09 -2.317100e-08 -2.517476e-08
+
+Total processing time: 52.97 sec 
+
+ Job finished: Mon Dec 11 13:39:11 2017
+
+S1 Gradient:
+
+Startfile from command line: tc.in
+
+
+       ***********************************************************
+       *                    TeraChem v1.9-2017.12-dev            *
+       *                 Hg Version: c1092a6a9743                *
+       *                   Development Version                   *
+       *                Compiled without textures                *
+       *           Chemistry at the Speed of Graphics!           *
+       ***********************************************************
+       * This program may only be used in connection with        *
+       * a valid license from PetaChem, LLC. Use of this program *
+       * or results thereof indicates acceptance of all terms    *
+       * and conditions stated in the license and that a valid   *
+       * license agreement between the user and PetaChem, LLC    *
+       * exists. PetaChem, LLC does not warrant the correctness  *
+       * of results or their suitability for any purpose.        *
+       * Please email bugs, suggestions, and comments to         *
+       *                  help@petachem.com                      *
+       *                                                         *
+       ***********************************************************
+
+
+       ***********************************************************
+       *  Compiled by jenkins      Mon Dec  4 05:35:34 PST 2017  *
+       *  Supported architectures: sm_30 sm_35 sm_52 sm_61       *
+       *  Cuda compilation tools, release 8.0, V8.0.44           *
+       ***********************************************************
+
+
+ Job started   Mon Dec 11 13:39:48 2017
+ On fire-12-04 (available memory: 265964 MB)
+
+######################################### RUNTIME INFO ##########################################
+terachem tc.in 
+
+NVRM version: NVIDIA UNIX x86_64 Kernel Module  384.27  Sun May 21 00:39:55 PDT 2017
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+
+	linux-vdso.so.1 =>  (0x00007ffd58bc5000)
+	libcurl.so.4 => /usr/lib64/libcurl.so.4 (0x00007f41ba559000)
+	libdftbplus.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libdftbplus.so (0x00007f41ba039000)
+	libfsockets.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libfsockets.so (0x00007f41b9e35000)
+	libxmlf90.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libxmlf90.so (0x00007f41b9c0f000)
+	libOpenMM.so => /global/software/OpenMM/7.1-intel-2016.0.109-CUDA-8.0.44/lib/libOpenMM.so (0x00007f41b964d000)
+	libprotobuf.so.12 => /global/software/protobuf/3.2.0-intel-2016.0.109/lib/libprotobuf.so.12 (0x00007f41b90e3000)
+	libintbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libintbox.so.1 (0x00007f419b211000)
+	libthcbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libthcbox.so.1 (0x00007f4199721000)
+	libgridbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libgridbox.so.1 (0x00007f419924f000)
+	libdftbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libdftbox.so.1 (0x00007f4198f69000)
+	libcuda.so.1 => /usr/lib64/libcuda.so.1 (0x00007f419814e000)
+	libcudart.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcudart.so.8.0 (0x00007f4197ee8000)
+	libcublas.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcublas.so.8.0 (0x00007f4195537000)
+	libcufft.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcufft.so.8.0 (0x00007f418c6e9000)
+	libcrypto.so.10 => /usr/lib64/libcrypto.so.10 (0x00007f418c2ff000)
+	libssl.so.10 => /usr/lib64/libssl.so.10 (0x00007f418c090000)
+	libm.so.6 => /usr/lib64/libm.so.6 (0x00007f418bd8e000)
+	libcilkrts.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libcilkrts.so.5 (0x00007f418bb4d000)
+	libstdc++.so.6 => /usr/lib64/libstdc++.so.6 (0x00007f418b843000)
+	libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x00007f418b62d000)
+	libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x00007f418b411000)
+	libc.so.6 => /usr/lib64/libc.so.6 (0x00007f418b04f000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f41ba7d5000)
+	libdl.so.2 => /usr/lib64/libdl.so.2 (0x00007f418ae4b000)
+	libidn.so.11 => /usr/lib64/libidn.so.11 (0x00007f418ac18000)
+	libssh2.so.1 => /usr/lib64/libssh2.so.1 (0x00007f418a9ed000)
+	libssl3.so => /usr/lib64/libssl3.so (0x00007f418a7a1000)
+	libsmime3.so => /usr/lib64/libsmime3.so (0x00007f418a57a000)
+	libnss3.so => /usr/lib64/libnss3.so (0x00007f418a24f000)
+	libnssutil3.so => /usr/lib64/libnssutil3.so (0x00007f418a022000)
+	libplds4.so => /usr/lib64/libplds4.so (0x00007f4189e1e000)
+	libplc4.so => /usr/lib64/libplc4.so (0x00007f4189c18000)
+	libnspr4.so => /usr/lib64/libnspr4.so (0x00007f41899da000)
+	libgssapi_krb5.so.2 => /usr/lib64/libgssapi_krb5.so.2 (0x00007f418978c000)
+	libkrb5.so.3 => /usr/lib64/libkrb5.so.3 (0x00007f41894a4000)
+	libk5crypto.so.3 => /usr/lib64/libk5crypto.so.3 (0x00007f4189272000)
+	libcom_err.so.2 => /usr/lib64/libcom_err.so.2 (0x00007f418906e000)
+	liblber-2.4.so.2 => /usr/lib64/liblber-2.4.so.2 (0x00007f4188e5e000)
+	libldap-2.4.so.2 => /usr/lib64/libldap-2.4.so.2 (0x00007f4188c0b000)
+	libz.so.1 => /usr/lib64/libz.so.1 (0x00007f41889f5000)
+	libmkl_intel_lp64.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_intel_lp64.so (0x00007f41880b6000)
+	libmkl_intel_thread.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_intel_thread.so (0x00007f4186d5f000)
+	libmkl_core.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_core.so (0x00007f418547a000)
+	libiomp5.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libiomp5.so (0x00007f4185138000)
+	libifport.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libifport.so.5 (0x00007f4184f09000)
+	libifcoremt.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libifcoremt.so.5 (0x00007f4184b76000)
+	libimf.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libimf.so (0x00007f418467e000)
+	libsvml.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libsvml.so (0x00007f41837bf000)
+	libintlc.so.5 => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libintlc.so.5 (0x00007f418355f000)
+	librt.so.1 => /usr/lib64/librt.so.1 (0x00007f4183357000)
+	libirng.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libirng.so (0x00007f418314f000)
+	libnvidia-fatbinaryloader.so.384.27 => /usr/lib64/libnvidia-fatbinaryloader.so.384.27 (0x00007f4182efc000)
+	libkrb5support.so.0 => /usr/lib64/libkrb5support.so.0 (0x00007f4182cec000)
+	libkeyutils.so.1 => /usr/lib64/libkeyutils.so.1 (0x00007f4182ae8000)
+	libresolv.so.2 => /usr/lib64/libresolv.so.2 (0x00007f41828ce000)
+	libsasl2.so.3 => /usr/lib64/libsasl2.so.3 (0x00007f41826b0000)
+	libselinux.so.1 => /usr/lib64/libselinux.so.1 (0x00007f4182489000)
+	libcrypt.so.1 => /usr/lib64/libcrypt.so.1 (0x00007f4182251000)
+	libpcre.so.1 => /usr/lib64/libpcre.so.1 (0x00007f4181ff0000)
+	libfreebl3.so => /usr/lib64/libfreebl3.so (0x00007f4181ded000)
+#################################################################################################
+
+Cannot find license.dat file in the TeraChem installation directory /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1
+
+
+TRYING THE NETWORK LICENSE...
+Connecting to license server '54.208.252.40' port '8877'...
+Connected!
+Checking your license...
+
+**************************************************************
+  Greetings, Martinez Group! You have 1000 licenses in total
+  IN USE: 42
+  AVAILABLE: 958
+**************************************************************
+
+Scratch directory: ./scr
+Random number seed: 1426294375
+
+XYZ coordinates hbdi.xyz
+Molden File Output: ./scr/hbdi.molden
+Using basis set: 6-31gss
+Spin multiplicity: 1
+DIIS will use up to 10 vectors.
+WF convergence threshold: 1.00e-06
+Using DIIS algorithm to converge WF
+Maximum number of SCF iterations: 200
+Incremental fock with rebuild every 8 iterations
+Will switch to conventional Fock if diffuse functions are detected
+X-matrix tolerance: 1.00e-04
+PRECISION: MIXED
+Single/Double precision threshold: 1.00e-05
+Using fractional orbital occupations
+Fractional occupations determined from the Fermi-Dirac distribution
+54 occupied orbitals will have integer occupation
+6 occupied orbitals will have fractional occupation
+kT is set to  0.300 a.u.
+DFT Functional requested: hf
+Method: Hartree-Fock 
+Wavefunction: RESTRICTED
+Initial guess generated from superposition of atomic densities generated with HF,
+using spherically symmetric atomic densities and averaged alpha and beta spin densities.
+
+********************************************
+**** SINGLE POINT GRADIENT CALCULATIONS ****
+********************************************
+SCF:   Initial guess is taken from previous step
+
+using 1 out of 1 CUDA devices
+   Device 0:      GeForce GTX 970,  4037MB, CC 5.2 -- CPU THREAD 0
+-------------------------------------------------------------------
+Compiled with MAGMA support.  MAGMA parameters:
+    Matrices larger than 5000 square will be treated with MAGMA
+       (Change by setting the MagmaMinN environment variable)
+    Magma will use 1 out of 1 GPUs
+       (Change by setting the MagmaNGPUs environment variable)
+-------------------------------------------------------------------
+ CPU Memory Available: 48347.00 MegaWords 
+ GPU Memory Available: 248.67 MegaWords 
+ Maximum recommended basis set size: 5100 basis functions
+ (limited by GPU memory)
+-------------------------------------------------------------------
+Using d-functions. Configuring GPUs accordingly.
+0: CUBLAS initialized, available GPU memory: 2067MB
+
+
+Basis set:       6-31gss
+Total atoms:     27
+Total charge:    -1
+Total electrons: 114 (57-alpha, 57-beta)
+Number electrons modeled by ECPs: 0
+Total orbitals:  295
+Total AO shells: 129 (70 S-shells; 43 P-shells; 16 D-shells; 0 F-shells; 0 G-shells)
+Spin multiplicity: 1
+Nuclear repulsion energy (QM atoms): 987.768005641529 a.u.
+
+Using neutral atomic charges and default spins and spin directions.
+Number of unique atoms is: 4 
+Atom #1 is unique. Calculating atomic density. 
+Atom #3 is unique. Calculating atomic density. 
+Atom #6 is unique. Calculating atomic density. 
+Atom #17 is unique. Calculating atomic density. 
+
+                      *** Start SCF Iterations ***
+
+ Iter     DIIS Error       Energy change         Energy        Time(s)
+------------------------------------------------------------------------
+Initial temperature is 0.300000
+         >>> Purifying P... IDMP = 2.41e-01 <<<
+         >>> Purifying P... IDMP = 2.36e-01 <<<
+         >>> Purifying P... IDMP = 2.36e-01 <<<
+         >>> Purifying P... IDMP = 2.07e-01 <<<
+         >>> Purifying P... IDMP = 1.71e-01 <<<
+         >>> Purifying P... IDMP = 1.37e-01 <<<
+         >>> Purifying P... IDMP = 9.86e-02 <<<
+         >>> Purifying P... IDMP = 6.25e-02 <<<
+         >>> Purifying P... IDMP = 3.00e-02 <<<
+         >>> Purifying P... IDMP = 7.37e-03 <<<
+         >>> Purifying P... IDMP = 4.22e-04 <<<
+         >>> Purifying P... IDMP = 1.26e-06 <<<
+         >>> Purifying P... IDMP = 9.84e-12 <<<
+         >>> Purifying P... IDMP = 1.22e-15 <<<
+   1     0.4136168436    -716.0246346954    -716.0246346954     0.81  
+   2     0.2542051655      +1.5504362313    -714.4741984641     0.85  
+   3     0.3261321250      -0.2491636734    -714.7233621375     0.84  
+   4     0.1807507760      -2.9126686756    -717.6360308131     0.82  
+   5     0.1164890830      -0.0596033397    -717.6956341527     0.79  
+   6     0.0397936903      -0.9607270382    -718.6563611909     0.73  
+   7     0.0165528787      -0.0420210174    -718.6983822083     0.65  
+   8     0.0065589242      +0.0067801817    -718.6916020266     0.58  
+   9     0.0039333146      -0.0002771479    -718.6918791745     0.85  
+  10     0.0014373324      -0.0005815894    -718.6924607639     0.48  
+  11     0.0005213080      -0.0001121842    -718.6925729482     0.46  
+  12     0.0001882860      +0.0000049633    -718.6925679848     0.42  
+  13     0.0000897211      +0.0000710801    -718.6924969047     0.37  
+  14     0.0000579267      +0.0000406201    -718.6924562847     0.35  
+  15     0.0000266726      +0.0000206267    -718.6924356580     0.33  
+  16     0.0000113787      -0.0000036357    -718.6924392937     0.30  
+  17     0.0000034733      +0.0000004257    -718.6924388680     0.85  
+  18     0.0000020591      +0.0000003977    -718.6924384703     0.26  
+  19     0.0000008989      -0.0000000770    -718.6924385473     0.21  
+------------------------------------------------------------------------
+FINAL ENERGY: -718.6924385473 a.u.
+WARNING: Final energy is higher than the lowest energy by    0.0059437.
+Fractional Occupation Entropy: 7.9586303000
+Mermin Free Energy:            -721.0800276373
+CENTER OF MASS: {51.855101, 22.264033, -32.026343} ANGS
+DIPOLE MOMENT: {0.247914, 1.952000, -5.817848} (|D| = 6.141590) DEBYE
+
+Running Mulliken population analysis...
+
+
+  Active Space Parameters
+--------------------------------------------
+Number of closed orbitals:              54
+Number of active orbitals:               6
+Number of virtual orbitals:            235
+Number of molecular orbitals:          295
+Number of basis functions:             295
+Number of active electrons:              6
+Number of alpha electrons:               3
+Number of beta electrons:                3
+
+  Orbital      Energy        Occupation
+-----------------------------------------
+     53       -0.267732        1.000000
+     54       -0.256353        1.000000
+     55       -0.140206        0.649493
+     56       -0.119542        0.633656
+     57       -0.025359        0.558231
+     58        0.114087        0.442547
+     59        0.186995        0.383703
+     60        0.254082        0.332371
+     61        0.333443        0.000000
+     62        0.335817        0.000000
+
+  CAS Parameters
+--------------------------------------------
+Number of determinants:                400
+Number of singlet CSFs:                175
+Number of doublet CSFs:                  0
+Number of triplet CSFs:                189
+Number of quartet CSFs:                  0
+Number of quintet CSFs:                 35
+Number of sextet CSFs:                   0
+Number of septet CSFs:                   1
+Number of singlet states:                3
+Number of doublet states:                0
+Number of triplet states:                3
+Number of quartet states:                0
+Number of quintet states:                0
+Number of sextet states:                 0
+Number of septet states:                 0
+
+Singlet state  1 energy:       -719.50696300923323
+
+       -0.93737250110126  X55 X56 X57
+       -0.18139846627056  X55 X56 B57 A58
+       -0.18139846627056  X55 X56 A57 B58
+        0.10787574138748  X55 X56 X58
+        0.10555875452477  X56 X57 X59
+        0.07956317403759  X55 X57 X58
+        0.05079783841522  X55 X56 X60
+        0.04278315449558  A55 B56 X57 A58 B59
+        0.04278315449558  B55 A56 X57 B58 A59
+        0.03240901763670  X55 A56 B57 X58
+        0.03240901763670  X55 B56 A57 X58
+       -0.03210981487244  X55 B56 A57 A58 B60
+       -0.03210981487244  X55 A56 B57 B58 A60
+        0.03187744516387  X55 X57 X60
+        0.03097029688507  X55 X56 X59
+       -0.03078139666214  X55 A56 B57 X60
+       -0.03078139666214  X55 B56 A57 X60
+        0.02633398033660  A55 B56 X57 B58 A59
+        0.02633398033660  B55 A56 X57 A58 B59
+        0.02607815233014  B55 X56 A57 B58 A59
+        0.02607815233014  A55 X56 B57 A58 B59
+        0.02402603202880  X55 B56 X57 A60
+        0.02402603202880  X55 A56 X57 B60
+        0.02208103297061  X55 A56 B57 X59
+        0.02208103297061  X55 B56 A57 X59
+        0.02091783864423  X56 A57 B58 X59
+        0.02091783864423  X56 B57 A58 X59
+        0.02081981985701  X55 A56 A57 B58 B60
+        0.02081981985701  X55 B56 B57 A58 A60
+
+Singlet state  2 energy:       -719.36574704445002
+
+        0.57810648419857  X55 X56 B57 A58
+        0.57810648419857  X55 X56 A57 B58
+       -0.23927339344105  X55 X56 X57
+        0.19488925170570  X55 B56 X57 A58
+        0.19488925170570  X55 A56 X57 B58
+       -0.18309690469164  X55 A56 B57 X58
+       -0.18309690469164  X55 B56 A57 X58
+        0.11780575820613  X55 X56 A57 B60
+        0.11780575820613  X55 X56 B57 A60
+       -0.09864003072882  B55 X56 A57 A58 B59
+       -0.09864003072882  A55 X56 B57 B58 A59
+        0.09619787304134  X55 X56 X58
+       -0.08071100256204  X55 X57 X58
+       -0.07442019976915  X56 A57 B58 X59
+       -0.07442019976915  X56 B57 A58 X59
+       -0.07095049604562  B55 X56 X57 A59
+       -0.07095049604562  A55 X56 X57 B59
+        0.06704526227383  X55 X56 X59
+       -0.05458149738953  X55 X56 X60
+        0.05428268300906  B55 X56 B57 A58 A59
+        0.05428268300906  A55 X56 A57 B58 B59
+       -0.04848733288694  B55 A56 X57 A58 B59
+       -0.04848733288694  A55 B56 X57 B58 A59
+       -0.04435734771976  B55 X56 A57 B58 A59
+       -0.04435734771976  A55 X56 B57 A58 B59
+        0.03901612049391  X55 A56 B57 X59
+        0.03901612049391  X55 B56 A57 X59
+       -0.03625143587055  X55 B57 A58 X60
+       -0.03625143587055  X55 A57 B58 X60
+        0.02890032134521  A55 A56 X57 B58 B59
+        0.02890032134521  B55 B56 X57 A58 A59
+       -0.02852736142643  A55 B56 A57 X58 B59
+       -0.02852736142643  B55 A56 B57 X58 A59
+       -0.02756789007613  X55 X56 B58 A60
+       -0.02756789007613  X55 X56 A58 B60
+       -0.02654606954115  X55 A56 B57 A58 B60
+       -0.02654606954115  X55 B56 A57 B58 A60
+       -0.02523291890383  X55 B56 B57 A58 A60
+       -0.02523291890383  X55 A56 A57 B58 B60
+       -0.02410807378204  B56 X57 A58 X59
+       -0.02410807378204  A56 X57 B58 X59
+        0.02351156823992  B56 A57 X58 X59
+        0.02351156823992  A56 B57 X58 X59
+       -0.02115261963857  A55 B56 B57 X58 A59
+       -0.02115261963857  B55 A56 A57 X58 B59
+        0.02058323154810  X55 X57 X60
+        0.02031493777714  X55 A56 B58 X60
+        0.02031493777714  X55 B56 A58 X60
+
+Singlet state  3 energy:       -719.31089966320383
+
+        0.63519843267716  X55 X56 X58
+       -0.37682417172006  X55 A56 X57 B58
+       -0.37682417172006  X55 B56 X57 A58
+       -0.25983785164329  X55 X56 A57 B60
+       -0.25983785164329  X55 X56 B57 A60
+       -0.13088255090660  X55 X57 X58
+        0.12697146463283  X55 X56 B57 A58
+        0.12697146463283  X55 X56 A57 B58
+       -0.11943601044196  X55 A56 X57 B60
+       -0.11943601044196  X55 B56 X57 A60
+        0.10863326734479  X55 X56 B58 A60
+        0.10863326734479  X55 X56 A58 B60
+       -0.08178899321677  X55 X56 X60
+       -0.07577295271082  X56 X58 X59
+        0.06010834969448  X55 B56 B57 A58 A60
+        0.06010834969448  X55 A56 A57 B58 B60
+       -0.05288004785684  X55 B56 A57 X58
+       -0.05288004785684  X55 A56 B57 X58
+        0.04904833782837  B55 X56 A57 A58 B59
+        0.04904833782837  A55 X56 B57 B58 A59
+        0.04610096003559  A55 X56 B57 A59 B60
+        0.04610096003559  B55 X56 A57 B59 A60
+        0.04441673803341  B56 X57 A58 X59
+        0.04441673803341  A56 X57 B58 X59
+       -0.03988049969971  X55 X57 A58 B60
+       -0.03988049969971  X55 X57 B58 A60
+        0.03670204183844  X55 B56 A57 B58 A60
+        0.03670204183844  X55 A56 B57 A58 B60
+       -0.03610558500482  A55 B56 B57 X58 A59
+       -0.03610558500482  B55 A56 A57 X58 B59
+        0.03563344779546  A55 X56 X57 B59
+        0.03563344779546  B55 X56 X57 A59
+       -0.03276111668981  X56 A57 X59 B60
+       -0.03276111668981  X56 B57 X59 A60
+       -0.02980489409101  B55 A56 B57 X58 A59
+       -0.02980489409101  A55 B56 A57 X58 B59
+        0.02954773473932  B55 X56 A57 B58 A59
+        0.02954773473932  A55 X56 B57 A58 B59
+       -0.02810620589044  X56 X57 X58
+       -0.02559062412361  B55 X56 X58 A59
+       -0.02559062412361  A55 X56 X58 B59
+        0.02550329255702  A55 X56 B57 B59 A60
+        0.02550329255702  B55 X56 A57 A59 B60
+       -0.02340630785604  X55 B56 A57 A58 B60
+       -0.02340630785604  X55 A56 B57 B58 A60
+        0.02244664964125  A55 X57 X58 B59
+        0.02244664964125  B55 X57 X58 A59
+       -0.02184874869870  B55 X56 X57 A58
+       -0.02184874869870  A55 X56 X57 B58
+        0.02175005405027  X55 A56 B57 X60
+        0.02175005405027  X55 B56 A57 X60
+        0.02059766747857  B55 X56 B57 A59 A60
+        0.02059766747857  A55 X56 A57 B59 B60
+
+Triplet state  1 energy:       -719.42607713445852
+
+        0.66109258769700  X55 X56 A57 B58
+       -0.66109258769700  X55 X56 B57 A58
+        0.18416511646823  X55 A56 X57 B58
+       -0.18416511646823  X55 B56 X57 A58
+       -0.08109522960546  X56 A57 B58 X59
+        0.08109522960546  X56 B57 A58 X59
+        0.06512401365199  A55 X56 X57 B59
+       -0.06512401365199  B55 X56 X57 A59
+        0.05242498064228  A55 X56 B57 A58 B59
+       -0.05242498064228  B55 X56 A57 B58 A59
+        0.04557844461703  X55 B56 X57 A60
+       -0.04557844461703  X55 A56 X57 B60
+       -0.03981599424115  B55 X56 B57 A58 A59
+        0.03981599424115  A55 X56 A57 B58 B59
+        0.03773499166728  A55 B56 X57 A58 B59
+       -0.03773499166728  B55 A56 X57 B58 A59
+       -0.03719482750804  X55 A56 A57 B58 B60
+        0.03719482750804  X55 B56 B57 A58 A60
+        0.03422767729105  X55 B57 A58 X60
+       -0.03422767729105  X55 A57 B58 X60
+        0.03219184688668  X55 X56 A57 B60
+       -0.03219184688668  X55 X56 B57 A60
+        0.02882206939570  X55 A56 B58 X60
+       -0.02882206939570  X55 B56 A58 X60
+       -0.02641426599164  A55 B56 X57 B58 A59
+        0.02641426599164  B55 A56 X57 A58 B59
+        0.02616011119263  B56 X57 A58 X59
+       -0.02616011119263  A56 X57 B58 X59
+       -0.02595244941119  A55 B56 A57 X58 B59
+        0.02595244941119  B55 A56 B57 X58 A59
+       -0.02386043757288  A55 X56 B57 B58 A59
+        0.02386043757288  B55 X56 A57 A58 B59
+       -0.02240015142672  X55 X56 A58 B60
+        0.02240015142672  X55 X56 B58 A60
+       -0.02151142255838  X55 B56 X58 A60
+        0.02151142255838  X55 A56 X58 B60
+
+Triplet state  2 energy:       -719.34610554959716
+
+       -0.47437576524049  X55 B56 X57 A58
+        0.47437576524049  X55 A56 X57 B58
+       -0.40050116163245  X55 X56 A57 B60
+        0.40050116163245  X55 X56 B57 A60
+        0.16162127754315  A55 X56 X57 B59
+       -0.16162127754315  B55 X56 X57 A59
+        0.13273033577841  X55 X56 B57 A58
+       -0.13273033577841  X55 X56 A57 B58
+       -0.12541092057319  X55 B56 X57 A60
+        0.12541092057319  X55 A56 X57 B60
+       -0.11905108932470  X55 B56 A57 X58
+        0.11905108932470  X55 A56 B57 X58
+       -0.06583078413214  X55 B56 A57 B58 A60
+        0.06583078413214  X55 A56 B57 A58 B60
+        0.06552171478719  A55 X56 B57 A58 B59
+       -0.06552171478719  B55 X56 A57 B58 A59
+       -0.06537993179569  X55 X56 A57 B59
+        0.06537993179569  X55 X56 B57 A59
+       -0.06230893921945  X55 X56 A58 B60
+        0.06230893921945  X55 X56 B58 A60
+       -0.05860121950422  A56 X57 B58 X59
+        0.05860121950422  B56 X57 A58 X59
+       -0.04947823929913  X55 A57 X58 B60
+        0.04947823929913  X55 B57 X58 A60
+       -0.04552088872137  X56 A57 X59 B60
+        0.04552088872137  X56 B57 X59 A60
+        0.04423371819190  X55 B56 A57 X60
+       -0.04423371819190  X55 A56 B57 X60
+       -0.03611092700620  B55 X56 B57 A58 A59
+        0.03611092700620  A55 X56 A57 B58 B59
+        0.03363506474478  X55 A56 A57 B58 B60
+       -0.03363506474478  X55 B56 B57 A58 A60
+        0.02986742042239  X55 A56 B58 X60
+       -0.02986742042239  X55 B56 A58 X60
+       -0.02848564644864  A55 X57 X58 B59
+        0.02848564644864  B55 X57 X58 A59
+       -0.02579618209367  X55 A56 X58 B60
+        0.02579618209367  X55 B56 X58 A60
+        0.02539391519198  B55 B56 A57 X58 A59
+       -0.02539391519198  A55 A56 B57 X58 B59
+        0.02404678030372  X55 X57 A58 B60
+       -0.02404678030372  X55 X57 B58 A60
+        0.02385484739042  X55 A56 B58 X59
+       -0.02385484739042  X55 B56 A58 X59
+       -0.02329610839167  A55 B56 X57 B59 A60
+        0.02329610839167  B55 A56 X57 A59 B60
+        0.02037474480952  A55 A56 A57 B58 B59 B60
+       -0.02037474480952  B55 B56 B57 A58 A59 A60
+       -0.02009095435967  X55 A56 B57 B58 A60
+        0.02009095435967  X55 B56 A57 A58 B60
+       -0.02003479563037  B55 X56 X57 A58
+        0.02003479563037  A55 X56 X57 B58
+
+Triplet state  3 energy:       -719.33559213942181
+
+        0.47534720610211  X55 X56 B57 A59
+       -0.47534720610211  X55 X56 A57 B59
+        0.39757378099326  B55 X56 X57 A58
+       -0.39757378099326  A55 X56 X57 B58
+        0.27163846547198  X55 B56 X57 A59
+       -0.27163846547198  X55 A56 X57 B59
+       -0.13118450749716  X55 X56 A58 B59
+        0.13118450749716  X55 X56 B58 A59
+        0.05844352314972  X55 B56 X57 A58
+       -0.05844352314972  X55 A56 X57 B58
+        0.04648974651782  X55 B56 B57 A58 A59
+       -0.04648974651782  X55 A56 A57 B58 B59
+        0.04144754106695  A55 B56 X57 X58
+       -0.04144754106695  B55 A56 X57 X58
+       -0.04031386427335  A55 X56 X57 B59
+        0.04031386427335  B55 X56 X57 A59
+        0.04022929661616  B55 X56 A58 X59
+       -0.04022929661616  A55 X56 B58 X59
+       -0.03667986329107  X55 A57 X58 B59
+        0.03667986329107  X55 B57 X58 A59
+       -0.03504806092497  A55 B56 A57 B58 X59
+        0.03504806092497  B55 A56 B57 A58 X59
+       -0.03048798229669  A55 A56 B57 B58 X59
+        0.03048798229669  B55 B56 A57 A58 X59
+        0.02993043080367  X56 X57 A58 B59
+       -0.02993043080367  X56 X57 B58 A59
+       -0.02873967282521  X55 A56 B59 X60
+        0.02873967282521  X55 B56 A59 X60
+        0.02549514579288  X55 B56 A57 B58 A59
+       -0.02549514579288  X55 A56 B57 A58 B59
+       -0.02527508475361  B55 X56 A57 B58 A60
+        0.02527508475361  A55 X56 B57 A58 B60
+       -0.02452210894531  A56 X57 X58 B59
+        0.02452210894531  B56 X57 X58 A59
+        0.02451070832403  X55 A57 B59 X60
+       -0.02451070832403  X55 B57 A59 X60
+       -0.02437079025384  A55 X57 B58 X59
+        0.02437079025384  B55 X57 A58 X59
+        0.02408212208838  X56 B57 X58 A59
+       -0.02408212208838  X56 A57 X58 B59
+       -0.02010376990804  A55 X56 B58 X60
+        0.02010376990804  B55 X56 A58 X60
+
+  Root   Mult.   Total Energy (a.u.)   Ex. Energy (a.u.)     Ex. Energy (eV)     Ex. Energy (nm)
+-------------------------------------------------------------------------------------------------
+     1  singlet       -719.50696301
+     2  triplet       -719.42607713          0.08088587          2.20101628        563.30442487
+     3  singlet       -719.36574704          0.14121596          3.84268128        322.65028419
+     4  triplet       -719.34610555          0.16085746          4.37715346        283.25308178
+     5  triplet       -719.33559214          0.17137087          4.66323786        265.87582370
+     6  singlet       -719.31089966          0.19606335          5.33515421        232.39107203
+
+Singlet state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1     1.1130     4.2432    -9.8547    10.7869
+     2     0.5340     3.6752   -10.6316    11.2616
+     3     0.6732     2.9331    -7.2818     7.8792
+
+Triplet state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1     1.4944     3.9413    -6.9121     8.0959
+     2    -0.0938     2.1275    -8.1153     8.3900
+     3     1.5081     4.6629    -9.4403    10.6365
+
+Singlet state electronic transitions:
+
+ Transition      Tx        Ty        Tz       |T|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2    -0.2665    0.7619   -4.0416    4.1214    1.5991
+   1 ->  3    -0.1526    0.0641   -0.9748    0.9887    0.1278
+   2 ->  3     0.2815    0.3848   -0.0146    0.4770    0.0083
+
+Triplet state electronic transitions:
+
+ Transition      Tx        Ty        Tz       |T|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2     0.4949    0.2168    1.6303    1.7175    0.1573
+   1 ->  3     0.3054    0.5017   -0.3196    0.6687    0.0270
+   2 ->  3    -0.0858   -0.1262    0.0359    0.1568    0.0002
+
+Building Xtilde...
+
+Building Z-vector RHS...
+
+Solving CPSCF equations
+Using DIIS solver
+
+ Iter         Residual      
+------  --------------------
+    1      0.178013939825
+    2      0.173607143122
+    3      0.025852341015
+    4      0.014877945784
+    5      0.006275216740
+    6      0.003008398937
+    7      0.001537909112
+    8      0.000736562976
+    9      0.000252201585
+   10      0.000126049023
+   11      0.000048508989
+   12      0.000024546663
+   13      0.000008579773
+   14      0.000004844339
+   15      0.000001241084
+   16      0.000000607750
+
+CPSCF converged
+
+Building X...
+
+
+Total CASCI Time
+----------------------------
+ Total Time:      42.02 sec
+----------------------------
+
+Writing out molden info
+
+Gradient units are Hartree/Bohr
+---------------------------------------------------
+        dE/dX            dE/dY            dE/dZ
+    0.0046925891     0.0080324441    -0.0061817912
+   -0.0003462605     0.0003715765    -0.0025822626
+    0.0212841106     0.0231217713     0.0202810616
+    0.0115317508     0.0183155515    -0.0099039983
+    0.0124745269     0.0027579416     0.0507530853
+   -0.0311015714    -0.0346780784    -0.0266231927
+   -0.0245612251    -0.0302166119    -0.0108036955
+   -0.0007975634     0.0031519504    -0.0152709501
+    0.0260390029     0.0253031959     0.0357568369
+   -0.0145591676    -0.0043855452    -0.0550231359
+    0.0028354028    -0.0053802011     0.0333890206
+    0.0088628114     0.0024824728     0.0339497437
+   -0.0051443192    -0.0002634071    -0.0247791990
+   -0.0030009366     0.0042145968    -0.0296752747
+   -0.0104189816    -0.0081073470    -0.0211299792
+    0.0081845603     0.0026977414     0.0300595116
+   -0.0015740724    -0.0026974328     0.0022428556
+    0.0029002030     0.0053440388    -0.0050118827
+    0.0027713322     0.0033871391     0.0012247533
+   -0.0034842543    -0.0039203955    -0.0028666056
+   -0.0043052735    -0.0049842241    -0.0030644974
+    0.0004408214     0.0002512182     0.0012334552
+   -0.0023048215     0.0005342627     0.0001731318
+    0.0011349328    -0.0020044799    -0.0005315592
+   -0.0024535058     0.0000682596     0.0024419590
+   -0.0004352585    -0.0006622738     0.0002674331
+    0.0013351673    -0.0027341637     0.0016751766
+---------------------------------------------------
+Net gradient:  2.160694e-10  1.329266e-11 -4.211555e-11
+Net torque:    3.093749e-08 -3.315061e-08 -1.937542e-08
+
+Total processing time: 53.09 sec 
+
+ Job finished: Mon Dec 11 13:40:51 2017
+
+T1 Gradient:
+
+Startfile from command line: tc.in
+
+
+       ***********************************************************
+       *                    TeraChem v1.9-2017.12-dev            *
+       *                 Hg Version: c1092a6a9743                *
+       *                   Development Version                   *
+       *                Compiled without textures                *
+       *           Chemistry at the Speed of Graphics!           *
+       ***********************************************************
+       * This program may only be used in connection with        *
+       * a valid license from PetaChem, LLC. Use of this program *
+       * or results thereof indicates acceptance of all terms    *
+       * and conditions stated in the license and that a valid   *
+       * license agreement between the user and PetaChem, LLC    *
+       * exists. PetaChem, LLC does not warrant the correctness  *
+       * of results or their suitability for any purpose.        *
+       * Please email bugs, suggestions, and comments to         *
+       *                  help@petachem.com                      *
+       *                                                         *
+       ***********************************************************
+
+
+       ***********************************************************
+       *  Compiled by jenkins      Mon Dec  4 05:35:34 PST 2017  *
+       *  Supported architectures: sm_30 sm_35 sm_52 sm_61       *
+       *  Cuda compilation tools, release 8.0, V8.0.44           *
+       ***********************************************************
+
+
+ Job started   Mon Dec 11 13:42:36 2017
+ On fire-12-04 (available memory: 265964 MB)
+
+######################################### RUNTIME INFO ##########################################
+terachem tc.in 
+
+NVRM version: NVIDIA UNIX x86_64 Kernel Module  384.27  Sun May 21 00:39:55 PDT 2017
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+
+	linux-vdso.so.1 =>  (0x00007ffc37fbf000)
+	libcurl.so.4 => /usr/lib64/libcurl.so.4 (0x00007f97dd2df000)
+	libdftbplus.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libdftbplus.so (0x00007f97dcdbf000)
+	libfsockets.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libfsockets.so (0x00007f97dcbbb000)
+	libxmlf90.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libxmlf90.so (0x00007f97dc995000)
+	libOpenMM.so => /global/software/OpenMM/7.1-intel-2016.0.109-CUDA-8.0.44/lib/libOpenMM.so (0x00007f97dc3d3000)
+	libprotobuf.so.12 => /global/software/protobuf/3.2.0-intel-2016.0.109/lib/libprotobuf.so.12 (0x00007f97dbe69000)
+	libintbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libintbox.so.1 (0x00007f97bdf97000)
+	libthcbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libthcbox.so.1 (0x00007f97bc4a7000)
+	libgridbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libgridbox.so.1 (0x00007f97bbfd5000)
+	libdftbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libdftbox.so.1 (0x00007f97bbcef000)
+	libcuda.so.1 => /usr/lib64/libcuda.so.1 (0x00007f97baed4000)
+	libcudart.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcudart.so.8.0 (0x00007f97bac6e000)
+	libcublas.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcublas.so.8.0 (0x00007f97b82bd000)
+	libcufft.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcufft.so.8.0 (0x00007f97af46f000)
+	libcrypto.so.10 => /usr/lib64/libcrypto.so.10 (0x00007f97af085000)
+	libssl.so.10 => /usr/lib64/libssl.so.10 (0x00007f97aee16000)
+	libm.so.6 => /usr/lib64/libm.so.6 (0x00007f97aeb14000)
+	libcilkrts.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libcilkrts.so.5 (0x00007f97ae8d3000)
+	libstdc++.so.6 => /usr/lib64/libstdc++.so.6 (0x00007f97ae5c9000)
+	libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x00007f97ae3b3000)
+	libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x00007f97ae197000)
+	libc.so.6 => /usr/lib64/libc.so.6 (0x00007f97addd5000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f97dd55b000)
+	libdl.so.2 => /usr/lib64/libdl.so.2 (0x00007f97adbd1000)
+	libidn.so.11 => /usr/lib64/libidn.so.11 (0x00007f97ad99e000)
+	libssh2.so.1 => /usr/lib64/libssh2.so.1 (0x00007f97ad773000)
+	libssl3.so => /usr/lib64/libssl3.so (0x00007f97ad527000)
+	libsmime3.so => /usr/lib64/libsmime3.so (0x00007f97ad300000)
+	libnss3.so => /usr/lib64/libnss3.so (0x00007f97acfd5000)
+	libnssutil3.so => /usr/lib64/libnssutil3.so (0x00007f97acda8000)
+	libplds4.so => /usr/lib64/libplds4.so (0x00007f97acba4000)
+	libplc4.so => /usr/lib64/libplc4.so (0x00007f97ac99e000)
+	libnspr4.so => /usr/lib64/libnspr4.so (0x00007f97ac760000)
+	libgssapi_krb5.so.2 => /usr/lib64/libgssapi_krb5.so.2 (0x00007f97ac512000)
+	libkrb5.so.3 => /usr/lib64/libkrb5.so.3 (0x00007f97ac22a000)
+	libk5crypto.so.3 => /usr/lib64/libk5crypto.so.3 (0x00007f97abff8000)
+	libcom_err.so.2 => /usr/lib64/libcom_err.so.2 (0x00007f97abdf4000)
+	liblber-2.4.so.2 => /usr/lib64/liblber-2.4.so.2 (0x00007f97abbe4000)
+	libldap-2.4.so.2 => /usr/lib64/libldap-2.4.so.2 (0x00007f97ab991000)
+	libz.so.1 => /usr/lib64/libz.so.1 (0x00007f97ab77b000)
+	libmkl_intel_lp64.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_intel_lp64.so (0x00007f97aae3c000)
+	libmkl_intel_thread.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_intel_thread.so (0x00007f97a9ae5000)
+	libmkl_core.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_core.so (0x00007f97a8200000)
+	libiomp5.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libiomp5.so (0x00007f97a7ebe000)
+	libifport.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libifport.so.5 (0x00007f97a7c8f000)
+	libifcoremt.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libifcoremt.so.5 (0x00007f97a78fc000)
+	libimf.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libimf.so (0x00007f97a7404000)
+	libsvml.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libsvml.so (0x00007f97a6545000)
+	libintlc.so.5 => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libintlc.so.5 (0x00007f97a62e5000)
+	librt.so.1 => /usr/lib64/librt.so.1 (0x00007f97a60dd000)
+	libirng.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libirng.so (0x00007f97a5ed5000)
+	libnvidia-fatbinaryloader.so.384.27 => /usr/lib64/libnvidia-fatbinaryloader.so.384.27 (0x00007f97a5c82000)
+	libkrb5support.so.0 => /usr/lib64/libkrb5support.so.0 (0x00007f97a5a72000)
+	libkeyutils.so.1 => /usr/lib64/libkeyutils.so.1 (0x00007f97a586e000)
+	libresolv.so.2 => /usr/lib64/libresolv.so.2 (0x00007f97a5654000)
+	libsasl2.so.3 => /usr/lib64/libsasl2.so.3 (0x00007f97a5436000)
+	libselinux.so.1 => /usr/lib64/libselinux.so.1 (0x00007f97a520f000)
+	libcrypt.so.1 => /usr/lib64/libcrypt.so.1 (0x00007f97a4fd7000)
+	libpcre.so.1 => /usr/lib64/libpcre.so.1 (0x00007f97a4d76000)
+	libfreebl3.so => /usr/lib64/libfreebl3.so (0x00007f97a4b73000)
+#################################################################################################
+
+Cannot find license.dat file in the TeraChem installation directory /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1
+
+
+TRYING THE NETWORK LICENSE...
+Connecting to license server '54.208.252.40' port '8877'...
+Connected!
+Checking your license...
+
+**************************************************************
+  Greetings, Martinez Group! You have 1000 licenses in total
+  IN USE: 44
+  AVAILABLE: 956
+**************************************************************
+
+Scratch directory: ./scr
+Random number seed: 532568994
+
+XYZ coordinates hbdi.xyz
+Molden File Output: ./scr/hbdi.molden
+Using basis set: 6-31gss
+Spin multiplicity: 1
+DIIS will use up to 10 vectors.
+WF convergence threshold: 1.00e-06
+Using DIIS algorithm to converge WF
+Maximum number of SCF iterations: 200
+Incremental fock with rebuild every 8 iterations
+Will switch to conventional Fock if diffuse functions are detected
+X-matrix tolerance: 1.00e-04
+PRECISION: MIXED
+Single/Double precision threshold: 1.00e-05
+Using fractional orbital occupations
+Fractional occupations determined from the Fermi-Dirac distribution
+54 occupied orbitals will have integer occupation
+6 occupied orbitals will have fractional occupation
+kT is set to  0.300 a.u.
+DFT Functional requested: hf
+Method: Hartree-Fock 
+Wavefunction: RESTRICTED
+Initial guess generated from superposition of atomic densities generated with HF,
+using spherically symmetric atomic densities and averaged alpha and beta spin densities.
+
+********************************************
+**** SINGLE POINT GRADIENT CALCULATIONS ****
+********************************************
+SCF:   Initial guess is taken from previous step
+
+using 1 out of 1 CUDA devices
+   Device 0:      GeForce GTX 970,  4037MB, CC 5.2 -- CPU THREAD 0
+-------------------------------------------------------------------
+Compiled with MAGMA support.  MAGMA parameters:
+    Matrices larger than 5000 square will be treated with MAGMA
+       (Change by setting the MagmaMinN environment variable)
+    Magma will use 1 out of 1 GPUs
+       (Change by setting the MagmaNGPUs environment variable)
+-------------------------------------------------------------------
+ CPU Memory Available: 48347.00 MegaWords 
+ GPU Memory Available: 248.67 MegaWords 
+ Maximum recommended basis set size: 5100 basis functions
+ (limited by GPU memory)
+-------------------------------------------------------------------
+Using d-functions. Configuring GPUs accordingly.
+0: CUBLAS initialized, available GPU memory: 2067MB
+
+
+Basis set:       6-31gss
+Total atoms:     27
+Total charge:    -1
+Total electrons: 114 (57-alpha, 57-beta)
+Number electrons modeled by ECPs: 0
+Total orbitals:  295
+Total AO shells: 129 (70 S-shells; 43 P-shells; 16 D-shells; 0 F-shells; 0 G-shells)
+Spin multiplicity: 1
+Nuclear repulsion energy (QM atoms): 987.768005641529 a.u.
+
+Using neutral atomic charges and default spins and spin directions.
+Number of unique atoms is: 4 
+Atom #1 is unique. Calculating atomic density. 
+Atom #3 is unique. Calculating atomic density. 
+Atom #6 is unique. Calculating atomic density. 
+Atom #17 is unique. Calculating atomic density. 
+
+                      *** Start SCF Iterations ***
+
+ Iter     DIIS Error       Energy change         Energy        Time(s)
+------------------------------------------------------------------------
+Initial temperature is 0.300000
+         >>> Purifying P... IDMP = 2.41e-01 <<<
+         >>> Purifying P... IDMP = 2.36e-01 <<<
+         >>> Purifying P... IDMP = 2.36e-01 <<<
+         >>> Purifying P... IDMP = 2.07e-01 <<<
+         >>> Purifying P... IDMP = 1.71e-01 <<<
+         >>> Purifying P... IDMP = 1.37e-01 <<<
+         >>> Purifying P... IDMP = 9.86e-02 <<<
+         >>> Purifying P... IDMP = 6.25e-02 <<<
+         >>> Purifying P... IDMP = 3.00e-02 <<<
+         >>> Purifying P... IDMP = 7.37e-03 <<<
+         >>> Purifying P... IDMP = 4.22e-04 <<<
+         >>> Purifying P... IDMP = 1.26e-06 <<<
+         >>> Purifying P... IDMP = 9.84e-12 <<<
+         >>> Purifying P... IDMP = 1.22e-15 <<<
+   1     0.4136168436    -716.0246346954    -716.0246346954     0.81  
+   2     0.2542051655      +1.5504362313    -714.4741984641     0.85  
+   3     0.3261321250      -0.2491636734    -714.7233621375     0.84  
+   4     0.1807507760      -2.9126686756    -717.6360308131     0.82  
+   5     0.1164890830      -0.0596033397    -717.6956341527     0.79  
+   6     0.0397936903      -0.9607270382    -718.6563611909     0.73  
+   7     0.0165528787      -0.0420210174    -718.6983822083     0.64  
+   8     0.0065589242      +0.0067801817    -718.6916020266     0.58  
+   9     0.0039333146      -0.0002771479    -718.6918791745     0.85  
+  10     0.0014373324      -0.0005815894    -718.6924607639     0.48  
+  11     0.0005213080      -0.0001121842    -718.6925729482     0.46  
+  12     0.0001882860      +0.0000049633    -718.6925679848     0.42  
+  13     0.0000897211      +0.0000710801    -718.6924969047     0.37  
+  14     0.0000579267      +0.0000406201    -718.6924562847     0.34  
+  15     0.0000266726      +0.0000206267    -718.6924356580     0.34  
+  16     0.0000113787      -0.0000036357    -718.6924392937     0.30  
+  17     0.0000034733      +0.0000004257    -718.6924388680     0.86  
+  18     0.0000020591      +0.0000003977    -718.6924384703     0.25  
+  19     0.0000008989      -0.0000000770    -718.6924385473     0.21  
+------------------------------------------------------------------------
+FINAL ENERGY: -718.6924385473 a.u.
+WARNING: Final energy is higher than the lowest energy by    0.0059437.
+Fractional Occupation Entropy: 7.9586303000
+Mermin Free Energy:            -721.0800276373
+CENTER OF MASS: {51.855101, 22.264033, -32.026343} ANGS
+DIPOLE MOMENT: {0.247914, 1.952000, -5.817848} (|D| = 6.141590) DEBYE
+
+Running Mulliken population analysis...
+
+
+  Active Space Parameters
+--------------------------------------------
+Number of closed orbitals:              54
+Number of active orbitals:               6
+Number of virtual orbitals:            235
+Number of molecular orbitals:          295
+Number of basis functions:             295
+Number of active electrons:              6
+Number of alpha electrons:               3
+Number of beta electrons:                3
+
+  Orbital      Energy        Occupation
+-----------------------------------------
+     53       -0.267732        1.000000
+     54       -0.256353        1.000000
+     55       -0.140206        0.649493
+     56       -0.119542        0.633656
+     57       -0.025359        0.558231
+     58        0.114087        0.442547
+     59        0.186995        0.383703
+     60        0.254082        0.332371
+     61        0.333443        0.000000
+     62        0.335817        0.000000
+
+  CAS Parameters
+--------------------------------------------
+Number of determinants:                400
+Number of singlet CSFs:                175
+Number of doublet CSFs:                  0
+Number of triplet CSFs:                189
+Number of quartet CSFs:                  0
+Number of quintet CSFs:                 35
+Number of sextet CSFs:                   0
+Number of septet CSFs:                   1
+Number of singlet states:                3
+Number of doublet states:                0
+Number of triplet states:                3
+Number of quartet states:                0
+Number of quintet states:                0
+Number of sextet states:                 0
+Number of septet states:                 0
+
+Singlet state  1 energy:       -719.50696300923323
+
+       -0.93737250110126  X55 X56 X57
+       -0.18139846627056  X55 X56 B57 A58
+       -0.18139846627056  X55 X56 A57 B58
+        0.10787574138748  X55 X56 X58
+        0.10555875452477  X56 X57 X59
+        0.07956317403759  X55 X57 X58
+        0.05079783841522  X55 X56 X60
+        0.04278315449558  A55 B56 X57 A58 B59
+        0.04278315449558  B55 A56 X57 B58 A59
+        0.03240901763670  X55 A56 B57 X58
+        0.03240901763670  X55 B56 A57 X58
+       -0.03210981487244  X55 B56 A57 A58 B60
+       -0.03210981487244  X55 A56 B57 B58 A60
+        0.03187744516387  X55 X57 X60
+        0.03097029688507  X55 X56 X59
+       -0.03078139666214  X55 A56 B57 X60
+       -0.03078139666214  X55 B56 A57 X60
+        0.02633398033660  A55 B56 X57 B58 A59
+        0.02633398033660  B55 A56 X57 A58 B59
+        0.02607815233014  B55 X56 A57 B58 A59
+        0.02607815233014  A55 X56 B57 A58 B59
+        0.02402603202880  X55 B56 X57 A60
+        0.02402603202880  X55 A56 X57 B60
+        0.02208103297061  X55 A56 B57 X59
+        0.02208103297061  X55 B56 A57 X59
+        0.02091783864423  X56 A57 B58 X59
+        0.02091783864423  X56 B57 A58 X59
+        0.02081981985701  X55 A56 A57 B58 B60
+        0.02081981985701  X55 B56 B57 A58 A60
+
+Singlet state  2 energy:       -719.36574704445002
+
+        0.57810648419857  X55 X56 B57 A58
+        0.57810648419857  X55 X56 A57 B58
+       -0.23927339344105  X55 X56 X57
+        0.19488925170570  X55 B56 X57 A58
+        0.19488925170570  X55 A56 X57 B58
+       -0.18309690469164  X55 A56 B57 X58
+       -0.18309690469164  X55 B56 A57 X58
+        0.11780575820613  X55 X56 A57 B60
+        0.11780575820613  X55 X56 B57 A60
+       -0.09864003072882  B55 X56 A57 A58 B59
+       -0.09864003072882  A55 X56 B57 B58 A59
+        0.09619787304134  X55 X56 X58
+       -0.08071100256204  X55 X57 X58
+       -0.07442019976915  X56 A57 B58 X59
+       -0.07442019976915  X56 B57 A58 X59
+       -0.07095049604562  B55 X56 X57 A59
+       -0.07095049604562  A55 X56 X57 B59
+        0.06704526227383  X55 X56 X59
+       -0.05458149738953  X55 X56 X60
+        0.05428268300906  B55 X56 B57 A58 A59
+        0.05428268300906  A55 X56 A57 B58 B59
+       -0.04848733288694  B55 A56 X57 A58 B59
+       -0.04848733288694  A55 B56 X57 B58 A59
+       -0.04435734771976  B55 X56 A57 B58 A59
+       -0.04435734771976  A55 X56 B57 A58 B59
+        0.03901612049391  X55 A56 B57 X59
+        0.03901612049391  X55 B56 A57 X59
+       -0.03625143587055  X55 B57 A58 X60
+       -0.03625143587055  X55 A57 B58 X60
+        0.02890032134521  A55 A56 X57 B58 B59
+        0.02890032134521  B55 B56 X57 A58 A59
+       -0.02852736142643  A55 B56 A57 X58 B59
+       -0.02852736142643  B55 A56 B57 X58 A59
+       -0.02756789007613  X55 X56 B58 A60
+       -0.02756789007613  X55 X56 A58 B60
+       -0.02654606954115  X55 A56 B57 A58 B60
+       -0.02654606954115  X55 B56 A57 B58 A60
+       -0.02523291890383  X55 B56 B57 A58 A60
+       -0.02523291890383  X55 A56 A57 B58 B60
+       -0.02410807378204  B56 X57 A58 X59
+       -0.02410807378204  A56 X57 B58 X59
+        0.02351156823992  B56 A57 X58 X59
+        0.02351156823992  A56 B57 X58 X59
+       -0.02115261963857  A55 B56 B57 X58 A59
+       -0.02115261963857  B55 A56 A57 X58 B59
+        0.02058323154810  X55 X57 X60
+        0.02031493777714  X55 A56 B58 X60
+        0.02031493777714  X55 B56 A58 X60
+
+Singlet state  3 energy:       -719.31089966320383
+
+        0.63519843267716  X55 X56 X58
+       -0.37682417172006  X55 A56 X57 B58
+       -0.37682417172006  X55 B56 X57 A58
+       -0.25983785164329  X55 X56 A57 B60
+       -0.25983785164329  X55 X56 B57 A60
+       -0.13088255090660  X55 X57 X58
+        0.12697146463283  X55 X56 B57 A58
+        0.12697146463283  X55 X56 A57 B58
+       -0.11943601044196  X55 A56 X57 B60
+       -0.11943601044196  X55 B56 X57 A60
+        0.10863326734479  X55 X56 B58 A60
+        0.10863326734479  X55 X56 A58 B60
+       -0.08178899321677  X55 X56 X60
+       -0.07577295271082  X56 X58 X59
+        0.06010834969448  X55 B56 B57 A58 A60
+        0.06010834969448  X55 A56 A57 B58 B60
+       -0.05288004785684  X55 B56 A57 X58
+       -0.05288004785684  X55 A56 B57 X58
+        0.04904833782837  B55 X56 A57 A58 B59
+        0.04904833782837  A55 X56 B57 B58 A59
+        0.04610096003559  A55 X56 B57 A59 B60
+        0.04610096003559  B55 X56 A57 B59 A60
+        0.04441673803341  B56 X57 A58 X59
+        0.04441673803341  A56 X57 B58 X59
+       -0.03988049969971  X55 X57 A58 B60
+       -0.03988049969971  X55 X57 B58 A60
+        0.03670204183844  X55 B56 A57 B58 A60
+        0.03670204183844  X55 A56 B57 A58 B60
+       -0.03610558500482  A55 B56 B57 X58 A59
+       -0.03610558500482  B55 A56 A57 X58 B59
+        0.03563344779546  A55 X56 X57 B59
+        0.03563344779546  B55 X56 X57 A59
+       -0.03276111668981  X56 A57 X59 B60
+       -0.03276111668981  X56 B57 X59 A60
+       -0.02980489409101  B55 A56 B57 X58 A59
+       -0.02980489409101  A55 B56 A57 X58 B59
+        0.02954773473932  B55 X56 A57 B58 A59
+        0.02954773473932  A55 X56 B57 A58 B59
+       -0.02810620589044  X56 X57 X58
+       -0.02559062412361  B55 X56 X58 A59
+       -0.02559062412361  A55 X56 X58 B59
+        0.02550329255702  A55 X56 B57 B59 A60
+        0.02550329255702  B55 X56 A57 A59 B60
+       -0.02340630785604  X55 B56 A57 A58 B60
+       -0.02340630785604  X55 A56 B57 B58 A60
+        0.02244664964125  A55 X57 X58 B59
+        0.02244664964125  B55 X57 X58 A59
+       -0.02184874869870  B55 X56 X57 A58
+       -0.02184874869870  A55 X56 X57 B58
+        0.02175005405027  X55 A56 B57 X60
+        0.02175005405027  X55 B56 A57 X60
+        0.02059766747857  B55 X56 B57 A59 A60
+        0.02059766747857  A55 X56 A57 B59 B60
+
+Triplet state  1 energy:       -719.42607713445852
+
+        0.66109258769700  X55 X56 A57 B58
+       -0.66109258769700  X55 X56 B57 A58
+        0.18416511646823  X55 A56 X57 B58
+       -0.18416511646823  X55 B56 X57 A58
+       -0.08109522960546  X56 A57 B58 X59
+        0.08109522960546  X56 B57 A58 X59
+        0.06512401365199  A55 X56 X57 B59
+       -0.06512401365199  B55 X56 X57 A59
+        0.05242498064228  A55 X56 B57 A58 B59
+       -0.05242498064228  B55 X56 A57 B58 A59
+        0.04557844461703  X55 B56 X57 A60
+       -0.04557844461703  X55 A56 X57 B60
+       -0.03981599424115  B55 X56 B57 A58 A59
+        0.03981599424115  A55 X56 A57 B58 B59
+        0.03773499166728  A55 B56 X57 A58 B59
+       -0.03773499166728  B55 A56 X57 B58 A59
+       -0.03719482750804  X55 A56 A57 B58 B60
+        0.03719482750804  X55 B56 B57 A58 A60
+        0.03422767729105  X55 B57 A58 X60
+       -0.03422767729105  X55 A57 B58 X60
+        0.03219184688668  X55 X56 A57 B60
+       -0.03219184688668  X55 X56 B57 A60
+        0.02882206939570  X55 A56 B58 X60
+       -0.02882206939570  X55 B56 A58 X60
+       -0.02641426599164  A55 B56 X57 B58 A59
+        0.02641426599164  B55 A56 X57 A58 B59
+        0.02616011119263  B56 X57 A58 X59
+       -0.02616011119263  A56 X57 B58 X59
+       -0.02595244941119  A55 B56 A57 X58 B59
+        0.02595244941119  B55 A56 B57 X58 A59
+       -0.02386043757288  A55 X56 B57 B58 A59
+        0.02386043757288  B55 X56 A57 A58 B59
+       -0.02240015142672  X55 X56 A58 B60
+        0.02240015142672  X55 X56 B58 A60
+       -0.02151142255838  X55 B56 X58 A60
+        0.02151142255838  X55 A56 X58 B60
+
+Triplet state  2 energy:       -719.34610554959716
+
+       -0.47437576524049  X55 B56 X57 A58
+        0.47437576524049  X55 A56 X57 B58
+       -0.40050116163245  X55 X56 A57 B60
+        0.40050116163245  X55 X56 B57 A60
+        0.16162127754315  A55 X56 X57 B59
+       -0.16162127754315  B55 X56 X57 A59
+        0.13273033577841  X55 X56 B57 A58
+       -0.13273033577841  X55 X56 A57 B58
+       -0.12541092057319  X55 B56 X57 A60
+        0.12541092057319  X55 A56 X57 B60
+       -0.11905108932470  X55 B56 A57 X58
+        0.11905108932470  X55 A56 B57 X58
+       -0.06583078413214  X55 B56 A57 B58 A60
+        0.06583078413214  X55 A56 B57 A58 B60
+        0.06552171478719  A55 X56 B57 A58 B59
+       -0.06552171478719  B55 X56 A57 B58 A59
+       -0.06537993179569  X55 X56 A57 B59
+        0.06537993179569  X55 X56 B57 A59
+       -0.06230893921945  X55 X56 A58 B60
+        0.06230893921945  X55 X56 B58 A60
+       -0.05860121950422  A56 X57 B58 X59
+        0.05860121950422  B56 X57 A58 X59
+       -0.04947823929913  X55 A57 X58 B60
+        0.04947823929913  X55 B57 X58 A60
+       -0.04552088872137  X56 A57 X59 B60
+        0.04552088872137  X56 B57 X59 A60
+        0.04423371819190  X55 B56 A57 X60
+       -0.04423371819190  X55 A56 B57 X60
+       -0.03611092700620  B55 X56 B57 A58 A59
+        0.03611092700620  A55 X56 A57 B58 B59
+        0.03363506474478  X55 A56 A57 B58 B60
+       -0.03363506474478  X55 B56 B57 A58 A60
+        0.02986742042239  X55 A56 B58 X60
+       -0.02986742042239  X55 B56 A58 X60
+       -0.02848564644864  A55 X57 X58 B59
+        0.02848564644864  B55 X57 X58 A59
+       -0.02579618209367  X55 A56 X58 B60
+        0.02579618209367  X55 B56 X58 A60
+        0.02539391519198  B55 B56 A57 X58 A59
+       -0.02539391519198  A55 A56 B57 X58 B59
+        0.02404678030372  X55 X57 A58 B60
+       -0.02404678030372  X55 X57 B58 A60
+        0.02385484739042  X55 A56 B58 X59
+       -0.02385484739042  X55 B56 A58 X59
+       -0.02329610839167  A55 B56 X57 B59 A60
+        0.02329610839167  B55 A56 X57 A59 B60
+        0.02037474480952  A55 A56 A57 B58 B59 B60
+       -0.02037474480952  B55 B56 B57 A58 A59 A60
+       -0.02009095435967  X55 A56 B57 B58 A60
+        0.02009095435967  X55 B56 A57 A58 B60
+       -0.02003479563037  B55 X56 X57 A58
+        0.02003479563037  A55 X56 X57 B58
+
+Triplet state  3 energy:       -719.33559213942181
+
+        0.47534720610211  X55 X56 B57 A59
+       -0.47534720610211  X55 X56 A57 B59
+        0.39757378099326  B55 X56 X57 A58
+       -0.39757378099326  A55 X56 X57 B58
+        0.27163846547198  X55 B56 X57 A59
+       -0.27163846547198  X55 A56 X57 B59
+       -0.13118450749716  X55 X56 A58 B59
+        0.13118450749716  X55 X56 B58 A59
+        0.05844352314972  X55 B56 X57 A58
+       -0.05844352314972  X55 A56 X57 B58
+        0.04648974651782  X55 B56 B57 A58 A59
+       -0.04648974651782  X55 A56 A57 B58 B59
+        0.04144754106695  A55 B56 X57 X58
+       -0.04144754106695  B55 A56 X57 X58
+       -0.04031386427335  A55 X56 X57 B59
+        0.04031386427335  B55 X56 X57 A59
+        0.04022929661616  B55 X56 A58 X59
+       -0.04022929661616  A55 X56 B58 X59
+       -0.03667986329107  X55 A57 X58 B59
+        0.03667986329107  X55 B57 X58 A59
+       -0.03504806092497  A55 B56 A57 B58 X59
+        0.03504806092497  B55 A56 B57 A58 X59
+       -0.03048798229669  A55 A56 B57 B58 X59
+        0.03048798229669  B55 B56 A57 A58 X59
+        0.02993043080367  X56 X57 A58 B59
+       -0.02993043080367  X56 X57 B58 A59
+       -0.02873967282521  X55 A56 B59 X60
+        0.02873967282521  X55 B56 A59 X60
+        0.02549514579288  X55 B56 A57 B58 A59
+       -0.02549514579288  X55 A56 B57 A58 B59
+       -0.02527508475361  B55 X56 A57 B58 A60
+        0.02527508475361  A55 X56 B57 A58 B60
+       -0.02452210894531  A56 X57 X58 B59
+        0.02452210894531  B56 X57 X58 A59
+        0.02451070832403  X55 A57 B59 X60
+       -0.02451070832403  X55 B57 A59 X60
+       -0.02437079025384  A55 X57 B58 X59
+        0.02437079025384  B55 X57 A58 X59
+        0.02408212208838  X56 B57 X58 A59
+       -0.02408212208838  X56 A57 X58 B59
+       -0.02010376990804  A55 X56 B58 X60
+        0.02010376990804  B55 X56 A58 X60
+
+  Root   Mult.   Total Energy (a.u.)   Ex. Energy (a.u.)     Ex. Energy (eV)     Ex. Energy (nm)
+-------------------------------------------------------------------------------------------------
+     1  singlet       -719.50696301
+     2  triplet       -719.42607713          0.08088587          2.20101628        563.30442487
+     3  singlet       -719.36574704          0.14121596          3.84268128        322.65028419
+     4  triplet       -719.34610555          0.16085746          4.37715346        283.25308178
+     5  triplet       -719.33559214          0.17137087          4.66323786        265.87582370
+     6  singlet       -719.31089966          0.19606335          5.33515421        232.39107203
+
+Singlet state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1     1.1130     4.2432    -9.8547    10.7869
+     2     0.5340     3.6752   -10.6316    11.2616
+     3     0.6732     2.9331    -7.2818     7.8792
+
+Triplet state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1     1.4944     3.9413    -6.9121     8.0959
+     2    -0.0938     2.1275    -8.1153     8.3900
+     3     1.5081     4.6629    -9.4403    10.6365
+
+Singlet state electronic transitions:
+
+ Transition      Tx        Ty        Tz       |T|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2    -0.2665    0.7619   -4.0416    4.1214    1.5991
+   1 ->  3    -0.1526    0.0641   -0.9748    0.9887    0.1278
+   2 ->  3     0.2815    0.3848   -0.0146    0.4770    0.0083
+
+Triplet state electronic transitions:
+
+ Transition      Tx        Ty        Tz       |T|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2     0.4949    0.2168    1.6303    1.7175    0.1573
+   1 ->  3     0.3054    0.5017   -0.3196    0.6687    0.0270
+   2 ->  3    -0.0858   -0.1262    0.0359    0.1568    0.0002
+
+Building Xtilde...
+
+Building Z-vector RHS...
+
+Solving CPSCF equations
+Using DIIS solver
+
+ Iter         Residual      
+------  --------------------
+    1      0.122964531529
+    2      0.077560474209
+    3      0.042992615216
+    4      0.022921626807
+    5      0.008298398551
+    6      0.003824166113
+    7      0.002152878540
+    8      0.000832724345
+    9      0.000317452623
+   10      0.000138733951
+   11      0.000059810470
+   12      0.000030508928
+   13      0.000010163584
+   14      0.000005378307
+   15      0.000001754314
+   16      0.000000967267
+
+CPSCF converged
+
+Building X...
+
+
+Total CASCI Time
+----------------------------
+ Total Time:      42.55 sec
+----------------------------
+
+Writing out molden info
+
+Gradient units are Hartree/Bohr
+---------------------------------------------------
+        dE/dX            dE/dY            dE/dZ
+    0.0076195906     0.0117386483    -0.0046806763
+   -0.0089963831    -0.0381175010     0.0936860855
+    0.0419511449     0.0794108768    -0.0816224690
+    0.0209302978     0.0324030747    -0.0149680453
+    0.0114139918    -0.0011139464     0.0595731195
+   -0.0382889557    -0.0425203371    -0.0334056176
+   -0.0428466874    -0.0651686892     0.0259734744
+   -0.0008200626     0.0025338335    -0.0133280838
+    0.0148720412     0.0304665218    -0.0371491240
+    0.0040485516     0.0026387665     0.0102695368
+    0.0060561074     0.0068276783     0.0051654346
+   -0.0047998539    -0.0096940306     0.0112320112
+    0.0000959231     0.0024809047    -0.0091495963
+   -0.0034750815    -0.0004193464    -0.0152990313
+   -0.0074711777    -0.0040989084    -0.0212382066
+    0.0071741613     0.0013536364     0.0299909296
+   -0.0014423739    -0.0025118227     0.0022226158
+    0.0025822821     0.0049402057    -0.0051021151
+    0.0025898153     0.0030614806     0.0015237088
+   -0.0032761530    -0.0034659284    -0.0034935838
+   -0.0036146647    -0.0039850759    -0.0033277317
+    0.0005986055     0.0002606057     0.0019412903
+   -0.0013242843     0.0004244945    -0.0012611070
+    0.0003912675    -0.0008017372    -0.0016206623
+   -0.0032756309    -0.0012797784     0.0022679372
+   -0.0010072955    -0.0014202285     0.0002025319
+    0.0003148241    -0.0039433973     0.0015973746
+---------------------------------------------------
+Net gradient:  2.805482e-10  3.673035e-11  6.089380e-11
+Net torque:    2.957455e-08 -3.775366e-08 -1.767279e-08
+
+Total processing time: 53.60 sec 
+
+ Job finished: Mon Dec 11 13:43:39 2017
+
+S0-S1 Coupling:
+
+
+Startfile from command line: tc.in
+
+
+       ***********************************************************
+       *                    TeraChem v1.9-2017.12-dev            *
+       *                 Hg Version: c1092a6a9743                *
+       *                   Development Version                   *
+       *                Compiled without textures                *
+       *           Chemistry at the Speed of Graphics!           *
+       ***********************************************************
+       * This program may only be used in connection with        *
+       * a valid license from PetaChem, LLC. Use of this program *
+       * or results thereof indicates acceptance of all terms    *
+       * and conditions stated in the license and that a valid   *
+       * license agreement between the user and PetaChem, LLC    *
+       * exists. PetaChem, LLC does not warrant the correctness  *
+       * of results or their suitability for any purpose.        *
+       * Please email bugs, suggestions, and comments to         *
+       *                  help@petachem.com                      *
+       *                                                         *
+       ***********************************************************
+
+
+       ***********************************************************
+       *  Compiled by jenkins      Mon Dec  4 05:35:34 PST 2017  *
+       *  Supported architectures: sm_30 sm_35 sm_52 sm_61       *
+       *  Cuda compilation tools, release 8.0, V8.0.44           *
+       ***********************************************************
+
+
+ Job started   Tue Dec 12 02:26:22 2017
+ On fire-12-04 (available memory: 265933 MB)
+
+######################################### RUNTIME INFO ##########################################
+terachem tc.in 
+
+NVRM version: NVIDIA UNIX x86_64 Kernel Module  384.27  Sun May 21 00:39:55 PDT 2017
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+
+	linux-vdso.so.1 =>  (0x00007fffb7bbb000)
+	libcurl.so.4 => /usr/lib64/libcurl.so.4 (0x00007fca369cf000)
+	libdftbplus.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libdftbplus.so (0x00007fca364af000)
+	libfsockets.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libfsockets.so (0x00007fca362ab000)
+	libxmlf90.so => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libxmlf90.so (0x00007fca36085000)
+	libOpenMM.so => /global/software/OpenMM/7.1-intel-2016.0.109-CUDA-8.0.44/lib/libOpenMM.so (0x00007fca35ac3000)
+	libprotobuf.so.12 => /global/software/protobuf/3.2.0-intel-2016.0.109/lib/libprotobuf.so.12 (0x00007fca35559000)
+	libintbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libintbox.so.1 (0x00007fca17687000)
+	libthcbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libthcbox.so.1 (0x00007fca15b97000)
+	libgridbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libgridbox.so.1 (0x00007fca156c5000)
+	libdftbox.so.1 => /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1/lib/libdftbox.so.1 (0x00007fca153df000)
+	libcuda.so.1 => /usr/lib64/libcuda.so.1 (0x00007fca145c4000)
+	libcudart.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcudart.so.8.0 (0x00007fca1435e000)
+	libcublas.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcublas.so.8.0 (0x00007fca119ad000)
+	libcufft.so.8.0 => /global/software/CUDA/8.0.44/lib64/libcufft.so.8.0 (0x00007fca08b5f000)
+	libcrypto.so.10 => /usr/lib64/libcrypto.so.10 (0x00007fca08775000)
+	libssl.so.10 => /usr/lib64/libssl.so.10 (0x00007fca08506000)
+	libm.so.6 => /usr/lib64/libm.so.6 (0x00007fca08204000)
+	libcilkrts.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libcilkrts.so.5 (0x00007fca07fc3000)
+	libstdc++.so.6 => /usr/lib64/libstdc++.so.6 (0x00007fca07cb9000)
+	libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x00007fca07aa3000)
+	libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x00007fca07887000)
+	libc.so.6 => /usr/lib64/libc.so.6 (0x00007fca074c5000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fca36c4b000)
+	libdl.so.2 => /usr/lib64/libdl.so.2 (0x00007fca072c1000)
+	libidn.so.11 => /usr/lib64/libidn.so.11 (0x00007fca0708e000)
+	libssh2.so.1 => /usr/lib64/libssh2.so.1 (0x00007fca06e63000)
+	libssl3.so => /usr/lib64/libssl3.so (0x00007fca06c17000)
+	libsmime3.so => /usr/lib64/libsmime3.so (0x00007fca069f0000)
+	libnss3.so => /usr/lib64/libnss3.so (0x00007fca066c5000)
+	libnssutil3.so => /usr/lib64/libnssutil3.so (0x00007fca06498000)
+	libplds4.so => /usr/lib64/libplds4.so (0x00007fca06294000)
+	libplc4.so => /usr/lib64/libplc4.so (0x00007fca0608e000)
+	libnspr4.so => /usr/lib64/libnspr4.so (0x00007fca05e50000)
+	libgssapi_krb5.so.2 => /usr/lib64/libgssapi_krb5.so.2 (0x00007fca05c02000)
+	libkrb5.so.3 => /usr/lib64/libkrb5.so.3 (0x00007fca0591a000)
+	libk5crypto.so.3 => /usr/lib64/libk5crypto.so.3 (0x00007fca056e8000)
+	libcom_err.so.2 => /usr/lib64/libcom_err.so.2 (0x00007fca054e4000)
+	liblber-2.4.so.2 => /usr/lib64/liblber-2.4.so.2 (0x00007fca052d4000)
+	libldap-2.4.so.2 => /usr/lib64/libldap-2.4.so.2 (0x00007fca05081000)
+	libz.so.1 => /usr/lib64/libz.so.1 (0x00007fca04e6b000)
+	libmkl_intel_lp64.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_intel_lp64.so (0x00007fca0452c000)
+	libmkl_intel_thread.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_intel_thread.so (0x00007fca031d5000)
+	libmkl_core.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/mkl/lib/intel64/libmkl_core.so (0x00007fca018f0000)
+	libiomp5.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libiomp5.so (0x00007fca015ae000)
+	libifport.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libifport.so.5 (0x00007fca0137f000)
+	libifcoremt.so.5 => /global/software/ifort/2016.0.109/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64/libifcoremt.so.5 (0x00007fca00fec000)
+	libimf.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libimf.so (0x00007fca00af4000)
+	libsvml.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libsvml.so (0x00007fc9ffc35000)
+	libintlc.so.5 => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libintlc.so.5 (0x00007fc9ff9d5000)
+	librt.so.1 => /usr/lib64/librt.so.1 (0x00007fc9ff7cd000)
+	libirng.so => /global/software/imkl/11.3.0.109-iimpi-2016.0.109/lib/intel64/libirng.so (0x00007fc9ff5c5000)
+	libnvidia-fatbinaryloader.so.384.27 => /usr/lib64/libnvidia-fatbinaryloader.so.384.27 (0x00007fc9ff372000)
+	libkrb5support.so.0 => /usr/lib64/libkrb5support.so.0 (0x00007fc9ff162000)
+	libkeyutils.so.1 => /usr/lib64/libkeyutils.so.1 (0x00007fc9fef5e000)
+	libresolv.so.2 => /usr/lib64/libresolv.so.2 (0x00007fc9fed44000)
+	libsasl2.so.3 => /usr/lib64/libsasl2.so.3 (0x00007fc9feb26000)
+	libselinux.so.1 => /usr/lib64/libselinux.so.1 (0x00007fc9fe8ff000)
+	libcrypt.so.1 => /usr/lib64/libcrypt.so.1 (0x00007fc9fe6c7000)
+	libpcre.so.1 => /usr/lib64/libpcre.so.1 (0x00007fc9fe466000)
+	libfreebl3.so => /usr/lib64/libfreebl3.so (0x00007fc9fe263000)
+#################################################################################################
+
+Cannot find license.dat file in the TeraChem installation directory /global/software/TeraChem/2017.12-intel-2016.0.109-MPICH2-1.4.1p1
+
+
+TRYING THE NETWORK LICENSE...
+Connecting to license server '54.208.252.40' port '8877'...
+Connected!
+Checking your license...
+
+**************************************************************
+  Greetings, Martinez Group! You have 1000 licenses in total
+  IN USE: 44
+  AVAILABLE: 956
+**************************************************************
+
+Scratch directory: ./scr
+Random number seed: 994773241
+
+XYZ coordinates hbdi.xyz
+Molden File Output: ./scr/hbdi.molden
+Using basis set: 6-31gss
+Spin multiplicity: 1
+DIIS will use up to 10 vectors.
+WF convergence threshold: 1.00e-06
+Using DIIS algorithm to converge WF
+Maximum number of SCF iterations: 200
+Incremental fock with rebuild every 8 iterations
+Will switch to conventional Fock if diffuse functions are detected
+X-matrix tolerance: 1.00e-04
+PRECISION: MIXED
+Single/Double precision threshold: 1.00e-05
+Using fractional orbital occupations
+Fractional occupations determined from the Fermi-Dirac distribution
+54 occupied orbitals will have integer occupation
+6 occupied orbitals will have fractional occupation
+kT is set to  0.300 a.u.
+DFT Functional requested: hf
+Method: Hartree-Fock 
+Wavefunction: RESTRICTED
+Initial guess generated from superposition of atomic densities generated with HF,
+using spherically symmetric atomic densities and averaged alpha and beta spin densities.
+
+********************************************
+**** SINGLE POINT NONADIABATIC COUPLING ****
+********************************************
+
+using 1 out of 2 CUDA devices
+   Device 0:      GeForce GTX 970,  4037MB, CC 5.2 -- CPU THREAD 0
+   Device 1:      GeForce GTX 970, 4037MB, CC 5.2 -- IDLE
+-------------------------------------------------------------------
+Compiled with MAGMA support.  MAGMA parameters:
+    Matrices larger than 5000 square will be treated with MAGMA
+       (Change by setting the MagmaMinN environment variable)
+    Magma will use 1 out of 1 GPUs
+       (Change by setting the MagmaNGPUs environment variable)
+-------------------------------------------------------------------
+ CPU Memory Available: 48347.00 MegaWords 
+ GPU Memory Available: 248.67 MegaWords 
+ Maximum recommended basis set size: 5100 basis functions
+ (limited by GPU memory)
+-------------------------------------------------------------------
+Using d-functions. Configuring GPUs accordingly.
+0: CUBLAS initialized, available GPU memory: 2067MB
+
+
+Basis set:       6-31gss
+Total atoms:     27
+Total charge:    -1
+Total electrons: 114 (57-alpha, 57-beta)
+Number electrons modeled by ECPs: 0
+Total orbitals:  295
+Total AO shells: 129 (70 S-shells; 43 P-shells; 16 D-shells; 0 F-shells; 0 G-shells)
+Spin multiplicity: 1
+Nuclear repulsion energy (QM atoms): 987.768005641529 a.u.
+
+Using neutral atomic charges and default spins and spin directions.
+Number of unique atoms is: 4 
+Atom #1 is unique. Calculating atomic density. 
+Atom #3 is unique. Calculating atomic density. 
+Atom #6 is unique. Calculating atomic density. 
+Atom #17 is unique. Calculating atomic density. 
+
+                      *** Start SCF Iterations ***
+
+ Iter     DIIS Error       Energy change         Energy        Time(s)
+------------------------------------------------------------------------
+Initial temperature is 0.300000
+         >>> Purifying P... IDMP = 2.41e-01 <<<
+         >>> Purifying P... IDMP = 2.36e-01 <<<
+         >>> Purifying P... IDMP = 2.36e-01 <<<
+         >>> Purifying P... IDMP = 2.07e-01 <<<
+         >>> Purifying P... IDMP = 1.71e-01 <<<
+         >>> Purifying P... IDMP = 1.37e-01 <<<
+         >>> Purifying P... IDMP = 9.86e-02 <<<
+         >>> Purifying P... IDMP = 6.25e-02 <<<
+         >>> Purifying P... IDMP = 3.00e-02 <<<
+         >>> Purifying P... IDMP = 7.37e-03 <<<
+         >>> Purifying P... IDMP = 4.22e-04 <<<
+         >>> Purifying P... IDMP = 1.26e-06 <<<
+         >>> Purifying P... IDMP = 9.84e-12 <<<
+         >>> Purifying P... IDMP = 1.22e-15 <<<
+   1     0.4136168436    -716.0246346954    -716.0246346954     0.85  
+   2     0.2542051655      +1.5504362313    -714.4741984641     0.86  
+   3     0.3261321250      -0.2491636734    -714.7233621375     0.85  
+   4     0.1807507760      -2.9126686756    -717.6360308131     0.83  
+   5     0.1164890830      -0.0596033397    -717.6956341527     0.80  
+   6     0.0397936903      -0.9607270382    -718.6563611909     0.75  
+   7     0.0165528787      -0.0420210174    -718.6983822083     0.65  
+   8     0.0065589242      +0.0067801817    -718.6916020266     0.59  
+   9     0.0039333146      -0.0002771479    -718.6918791745     0.86  
+  10     0.0014373324      -0.0005815894    -718.6924607639     0.49  
+  11     0.0005213080      -0.0001121842    -718.6925729482     0.47  
+  12     0.0001882860      +0.0000049633    -718.6925679848     0.43  
+  13     0.0000897211      +0.0000710801    -718.6924969047     0.37  
+  14     0.0000579267      +0.0000406201    -718.6924562847     0.35  
+  15     0.0000266726      +0.0000206267    -718.6924356580     0.34  
+  16     0.0000113787      -0.0000036357    -718.6924392937     0.31  
+  17     0.0000034733      +0.0000004257    -718.6924388680     0.87  
+  18     0.0000020591      +0.0000003977    -718.6924384703     0.26  
+  19     0.0000008989      -0.0000000770    -718.6924385473     0.21  
+------------------------------------------------------------------------
+FINAL ENERGY: -718.6924385473 a.u.
+WARNING: Final energy is higher than the lowest energy by    0.0059437.
+Fractional Occupation Entropy: 7.9586303000
+Mermin Free Energy:            -721.0800276373
+CENTER OF MASS: {51.855101, 22.264033, -32.026343} ANGS
+DIPOLE MOMENT: {0.247914, 1.952000, -5.817848} (|D| = 6.141590) DEBYE
+
+  Active Space Parameters
+--------------------------------------------
+Number of closed orbitals:              54
+Number of active orbitals:               6
+Number of virtual orbitals:            235
+Number of molecular orbitals:          295
+Number of basis functions:             295
+Number of active electrons:              6
+Number of alpha electrons:               3
+Number of beta electrons:                3
+
+  Orbital      Energy        Occupation
+-----------------------------------------
+     53       -0.267732        1.000000
+     54       -0.256353        1.000000
+     55       -0.140206        0.649493
+     56       -0.119542        0.633656
+     57       -0.025359        0.558231
+     58        0.114087        0.442547
+     59        0.186995        0.383703
+     60        0.254082        0.332371
+     61        0.333443        0.000000
+     62        0.335817        0.000000
+
+  CAS Parameters
+--------------------------------------------
+Number of determinants:                400
+Number of singlet CSFs:                175
+Number of doublet CSFs:                  0
+Number of triplet CSFs:                189
+Number of quartet CSFs:                  0
+Number of quintet CSFs:                 35
+Number of sextet CSFs:                   0
+Number of septet CSFs:                   1
+Number of singlet states:                3
+Number of doublet states:                0
+Number of triplet states:                3
+Number of quartet states:                0
+Number of quintet states:                0
+Number of sextet states:                 0
+Number of septet states:                 0
+
+Singlet state  1 energy:       -719.50696300923323
+
+       -0.93737250110126  X55 X56 X57
+       -0.18139846627056  X55 X56 B57 A58
+       -0.18139846627056  X55 X56 A57 B58
+        0.10787574138748  X55 X56 X58
+        0.10555875452477  X56 X57 X59
+        0.07956317403759  X55 X57 X58
+        0.05079783841522  X55 X56 X60
+        0.04278315449558  A55 B56 X57 A58 B59
+        0.04278315449558  B55 A56 X57 B58 A59
+        0.03240901763670  X55 A56 B57 X58
+        0.03240901763670  X55 B56 A57 X58
+       -0.03210981487244  X55 B56 A57 A58 B60
+       -0.03210981487244  X55 A56 B57 B58 A60
+        0.03187744516387  X55 X57 X60
+        0.03097029688507  X55 X56 X59
+       -0.03078139666214  X55 A56 B57 X60
+       -0.03078139666214  X55 B56 A57 X60
+        0.02633398033660  A55 B56 X57 B58 A59
+        0.02633398033660  B55 A56 X57 A58 B59
+        0.02607815233014  B55 X56 A57 B58 A59
+        0.02607815233014  A55 X56 B57 A58 B59
+        0.02402603202880  X55 B56 X57 A60
+        0.02402603202880  X55 A56 X57 B60
+        0.02208103297061  X55 A56 B57 X59
+        0.02208103297061  X55 B56 A57 X59
+        0.02091783864423  X56 A57 B58 X59
+        0.02091783864423  X56 B57 A58 X59
+        0.02081981985701  X55 A56 A57 B58 B60
+        0.02081981985701  X55 B56 B57 A58 A60
+
+Singlet state  2 energy:       -719.36574704445002
+
+        0.57810648419857  X55 X56 B57 A58
+        0.57810648419857  X55 X56 A57 B58
+       -0.23927339344105  X55 X56 X57
+        0.19488925170570  X55 B56 X57 A58
+        0.19488925170570  X55 A56 X57 B58
+       -0.18309690469164  X55 A56 B57 X58
+       -0.18309690469164  X55 B56 A57 X58
+        0.11780575820613  X55 X56 A57 B60
+        0.11780575820613  X55 X56 B57 A60
+       -0.09864003072882  B55 X56 A57 A58 B59
+       -0.09864003072882  A55 X56 B57 B58 A59
+        0.09619787304134  X55 X56 X58
+       -0.08071100256204  X55 X57 X58
+       -0.07442019976915  X56 A57 B58 X59
+       -0.07442019976915  X56 B57 A58 X59
+       -0.07095049604562  B55 X56 X57 A59
+       -0.07095049604562  A55 X56 X57 B59
+        0.06704526227383  X55 X56 X59
+       -0.05458149738953  X55 X56 X60
+        0.05428268300906  B55 X56 B57 A58 A59
+        0.05428268300906  A55 X56 A57 B58 B59
+       -0.04848733288694  B55 A56 X57 A58 B59
+       -0.04848733288694  A55 B56 X57 B58 A59
+       -0.04435734771976  B55 X56 A57 B58 A59
+       -0.04435734771976  A55 X56 B57 A58 B59
+        0.03901612049391  X55 A56 B57 X59
+        0.03901612049391  X55 B56 A57 X59
+       -0.03625143587055  X55 B57 A58 X60
+       -0.03625143587055  X55 A57 B58 X60
+        0.02890032134521  A55 A56 X57 B58 B59
+        0.02890032134521  B55 B56 X57 A58 A59
+       -0.02852736142643  A55 B56 A57 X58 B59
+       -0.02852736142643  B55 A56 B57 X58 A59
+       -0.02756789007613  X55 X56 B58 A60
+       -0.02756789007613  X55 X56 A58 B60
+       -0.02654606954115  X55 A56 B57 A58 B60
+       -0.02654606954115  X55 B56 A57 B58 A60
+       -0.02523291890383  X55 B56 B57 A58 A60
+       -0.02523291890383  X55 A56 A57 B58 B60
+       -0.02410807378204  B56 X57 A58 X59
+       -0.02410807378204  A56 X57 B58 X59
+        0.02351156823992  B56 A57 X58 X59
+        0.02351156823992  A56 B57 X58 X59
+       -0.02115261963857  A55 B56 B57 X58 A59
+       -0.02115261963857  B55 A56 A57 X58 B59
+        0.02058323154810  X55 X57 X60
+        0.02031493777714  X55 A56 B58 X60
+        0.02031493777714  X55 B56 A58 X60
+
+Singlet state  3 energy:       -719.31089966320383
+
+        0.63519843267716  X55 X56 X58
+       -0.37682417172006  X55 A56 X57 B58
+       -0.37682417172006  X55 B56 X57 A58
+       -0.25983785164329  X55 X56 A57 B60
+       -0.25983785164329  X55 X56 B57 A60
+       -0.13088255090660  X55 X57 X58
+        0.12697146463283  X55 X56 B57 A58
+        0.12697146463283  X55 X56 A57 B58
+       -0.11943601044196  X55 A56 X57 B60
+       -0.11943601044196  X55 B56 X57 A60
+        0.10863326734479  X55 X56 B58 A60
+        0.10863326734479  X55 X56 A58 B60
+       -0.08178899321677  X55 X56 X60
+       -0.07577295271082  X56 X58 X59
+        0.06010834969448  X55 B56 B57 A58 A60
+        0.06010834969448  X55 A56 A57 B58 B60
+       -0.05288004785684  X55 B56 A57 X58
+       -0.05288004785684  X55 A56 B57 X58
+        0.04904833782837  B55 X56 A57 A58 B59
+        0.04904833782837  A55 X56 B57 B58 A59
+        0.04610096003559  A55 X56 B57 A59 B60
+        0.04610096003559  B55 X56 A57 B59 A60
+        0.04441673803341  B56 X57 A58 X59
+        0.04441673803341  A56 X57 B58 X59
+       -0.03988049969971  X55 X57 A58 B60
+       -0.03988049969971  X55 X57 B58 A60
+        0.03670204183844  X55 B56 A57 B58 A60
+        0.03670204183844  X55 A56 B57 A58 B60
+       -0.03610558500482  A55 B56 B57 X58 A59
+       -0.03610558500482  B55 A56 A57 X58 B59
+        0.03563344779546  A55 X56 X57 B59
+        0.03563344779546  B55 X56 X57 A59
+       -0.03276111668981  X56 A57 X59 B60
+       -0.03276111668981  X56 B57 X59 A60
+       -0.02980489409101  B55 A56 B57 X58 A59
+       -0.02980489409101  A55 B56 A57 X58 B59
+        0.02954773473932  B55 X56 A57 B58 A59
+        0.02954773473932  A55 X56 B57 A58 B59
+       -0.02810620589044  X56 X57 X58
+       -0.02559062412361  B55 X56 X58 A59
+       -0.02559062412361  A55 X56 X58 B59
+        0.02550329255702  A55 X56 B57 B59 A60
+        0.02550329255702  B55 X56 A57 A59 B60
+       -0.02340630785604  X55 B56 A57 A58 B60
+       -0.02340630785604  X55 A56 B57 B58 A60
+        0.02244664964125  A55 X57 X58 B59
+        0.02244664964125  B55 X57 X58 A59
+       -0.02184874869870  B55 X56 X57 A58
+       -0.02184874869870  A55 X56 X57 B58
+        0.02175005405027  X55 A56 B57 X60
+        0.02175005405027  X55 B56 A57 X60
+        0.02059766747857  B55 X56 B57 A59 A60
+        0.02059766747857  A55 X56 A57 B59 B60
+
+Triplet state  1 energy:       -719.42607713445852
+
+        0.66109258769700  X55 X56 A57 B58
+       -0.66109258769700  X55 X56 B57 A58
+        0.18416511646823  X55 A56 X57 B58
+       -0.18416511646823  X55 B56 X57 A58
+       -0.08109522960546  X56 A57 B58 X59
+        0.08109522960546  X56 B57 A58 X59
+        0.06512401365199  A55 X56 X57 B59
+       -0.06512401365199  B55 X56 X57 A59
+        0.05242498064228  A55 X56 B57 A58 B59
+       -0.05242498064228  B55 X56 A57 B58 A59
+        0.04557844461703  X55 B56 X57 A60
+       -0.04557844461703  X55 A56 X57 B60
+       -0.03981599424115  B55 X56 B57 A58 A59
+        0.03981599424115  A55 X56 A57 B58 B59
+        0.03773499166728  A55 B56 X57 A58 B59
+       -0.03773499166728  B55 A56 X57 B58 A59
+       -0.03719482750804  X55 A56 A57 B58 B60
+        0.03719482750804  X55 B56 B57 A58 A60
+        0.03422767729105  X55 B57 A58 X60
+       -0.03422767729105  X55 A57 B58 X60
+        0.03219184688668  X55 X56 A57 B60
+       -0.03219184688668  X55 X56 B57 A60
+        0.02882206939570  X55 A56 B58 X60
+       -0.02882206939570  X55 B56 A58 X60
+       -0.02641426599164  A55 B56 X57 B58 A59
+        0.02641426599164  B55 A56 X57 A58 B59
+        0.02616011119263  B56 X57 A58 X59
+       -0.02616011119263  A56 X57 B58 X59
+       -0.02595244941119  A55 B56 A57 X58 B59
+        0.02595244941119  B55 A56 B57 X58 A59
+       -0.02386043757288  A55 X56 B57 B58 A59
+        0.02386043757288  B55 X56 A57 A58 B59
+       -0.02240015142672  X55 X56 A58 B60
+        0.02240015142672  X55 X56 B58 A60
+       -0.02151142255838  X55 B56 X58 A60
+        0.02151142255838  X55 A56 X58 B60
+
+Triplet state  2 energy:       -719.34610554959716
+
+       -0.47437576524049  X55 B56 X57 A58
+        0.47437576524049  X55 A56 X57 B58
+       -0.40050116163245  X55 X56 A57 B60
+        0.40050116163245  X55 X56 B57 A60
+        0.16162127754315  A55 X56 X57 B59
+       -0.16162127754315  B55 X56 X57 A59
+        0.13273033577841  X55 X56 B57 A58
+       -0.13273033577841  X55 X56 A57 B58
+       -0.12541092057319  X55 B56 X57 A60
+        0.12541092057319  X55 A56 X57 B60
+       -0.11905108932470  X55 B56 A57 X58
+        0.11905108932470  X55 A56 B57 X58
+       -0.06583078413214  X55 B56 A57 B58 A60
+        0.06583078413214  X55 A56 B57 A58 B60
+        0.06552171478719  A55 X56 B57 A58 B59
+       -0.06552171478719  B55 X56 A57 B58 A59
+       -0.06537993179569  X55 X56 A57 B59
+        0.06537993179569  X55 X56 B57 A59
+       -0.06230893921945  X55 X56 A58 B60
+        0.06230893921945  X55 X56 B58 A60
+       -0.05860121950422  A56 X57 B58 X59
+        0.05860121950422  B56 X57 A58 X59
+       -0.04947823929913  X55 A57 X58 B60
+        0.04947823929913  X55 B57 X58 A60
+       -0.04552088872137  X56 A57 X59 B60
+        0.04552088872137  X56 B57 X59 A60
+        0.04423371819190  X55 B56 A57 X60
+       -0.04423371819190  X55 A56 B57 X60
+       -0.03611092700620  B55 X56 B57 A58 A59
+        0.03611092700620  A55 X56 A57 B58 B59
+        0.03363506474478  X55 A56 A57 B58 B60
+       -0.03363506474478  X55 B56 B57 A58 A60
+        0.02986742042239  X55 A56 B58 X60
+       -0.02986742042239  X55 B56 A58 X60
+       -0.02848564644864  A55 X57 X58 B59
+        0.02848564644864  B55 X57 X58 A59
+       -0.02579618209367  X55 A56 X58 B60
+        0.02579618209367  X55 B56 X58 A60
+        0.02539391519198  B55 B56 A57 X58 A59
+       -0.02539391519198  A55 A56 B57 X58 B59
+        0.02404678030372  X55 X57 A58 B60
+       -0.02404678030372  X55 X57 B58 A60
+        0.02385484739042  X55 A56 B58 X59
+       -0.02385484739042  X55 B56 A58 X59
+       -0.02329610839167  A55 B56 X57 B59 A60
+        0.02329610839167  B55 A56 X57 A59 B60
+        0.02037474480952  A55 A56 A57 B58 B59 B60
+       -0.02037474480952  B55 B56 B57 A58 A59 A60
+       -0.02009095435967  X55 A56 B57 B58 A60
+        0.02009095435967  X55 B56 A57 A58 B60
+       -0.02003479563037  B55 X56 X57 A58
+        0.02003479563037  A55 X56 X57 B58
+
+Triplet state  3 energy:       -719.33559213942181
+
+        0.47534720610211  X55 X56 B57 A59
+       -0.47534720610211  X55 X56 A57 B59
+        0.39757378099326  B55 X56 X57 A58
+       -0.39757378099326  A55 X56 X57 B58
+        0.27163846547198  X55 B56 X57 A59
+       -0.27163846547198  X55 A56 X57 B59
+       -0.13118450749716  X55 X56 A58 B59
+        0.13118450749716  X55 X56 B58 A59
+        0.05844352314972  X55 B56 X57 A58
+       -0.05844352314972  X55 A56 X57 B58
+        0.04648974651782  X55 B56 B57 A58 A59
+       -0.04648974651782  X55 A56 A57 B58 B59
+        0.04144754106695  A55 B56 X57 X58
+       -0.04144754106695  B55 A56 X57 X58
+       -0.04031386427335  A55 X56 X57 B59
+        0.04031386427335  B55 X56 X57 A59
+        0.04022929661616  B55 X56 A58 X59
+       -0.04022929661616  A55 X56 B58 X59
+       -0.03667986329107  X55 A57 X58 B59
+        0.03667986329107  X55 B57 X58 A59
+       -0.03504806092497  A55 B56 A57 B58 X59
+        0.03504806092497  B55 A56 B57 A58 X59
+       -0.03048798229669  A55 A56 B57 B58 X59
+        0.03048798229669  B55 B56 A57 A58 X59
+        0.02993043080367  X56 X57 A58 B59
+       -0.02993043080367  X56 X57 B58 A59
+       -0.02873967282521  X55 A56 B59 X60
+        0.02873967282521  X55 B56 A59 X60
+        0.02549514579288  X55 B56 A57 B58 A59
+       -0.02549514579288  X55 A56 B57 A58 B59
+       -0.02527508475361  B55 X56 A57 B58 A60
+        0.02527508475361  A55 X56 B57 A58 B60
+       -0.02452210894531  A56 X57 X58 B59
+        0.02452210894531  B56 X57 X58 A59
+        0.02451070832403  X55 A57 B59 X60
+       -0.02451070832403  X55 B57 A59 X60
+       -0.02437079025384  A55 X57 B58 X59
+        0.02437079025384  B55 X57 A58 X59
+        0.02408212208838  X56 B57 X58 A59
+       -0.02408212208838  X56 A57 X58 B59
+       -0.02010376990804  A55 X56 B58 X60
+        0.02010376990804  B55 X56 A58 X60
+
+  Root   Mult.   Total Energy (a.u.)   Ex. Energy (a.u.)     Ex. Energy (eV)     Ex. Energy (nm)
+-------------------------------------------------------------------------------------------------
+     1  singlet       -719.50696301
+     2  triplet       -719.42607713          0.08088587          2.20101628        563.30442487
+     3  singlet       -719.36574704          0.14121596          3.84268128        322.65028419
+     4  triplet       -719.34610555          0.16085746          4.37715346        283.25308178
+     5  triplet       -719.33559214          0.17137087          4.66323786        265.87582370
+     6  singlet       -719.31089966          0.19606335          5.33515421        232.39107203
+
+Singlet state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1     1.1130     4.2432    -9.8547    10.7869
+     2     0.5340     3.6752   -10.6316    11.2616
+     3     0.6732     2.9331    -7.2818     7.8792
+
+Triplet state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1     1.4944     3.9413    -6.9121     8.0959
+     2    -0.0938     2.1275    -8.1153     8.3900
+     3     1.5081     4.6629    -9.4403    10.6365
+
+Singlet state electronic transitions:
+
+ Transition      Tx        Ty        Tz       |T|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2    -0.2665    0.7619   -4.0416    4.1214    1.5991
+   1 ->  3    -0.1526    0.0641   -0.9748    0.9887    0.1278
+   2 ->  3     0.2815    0.3848   -0.0146    0.4770    0.0083
+
+Triplet state electronic transitions:
+
+ Transition      Tx        Ty        Tz       |T|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2     0.4949    0.2168    1.6303    1.7175    0.1573
+   1 ->  3     0.3054    0.5017   -0.3196    0.6687    0.0270
+   2 ->  3    -0.0858   -0.1262    0.0359    0.1568    0.0002
+
+Building Xtilde...
+
+Building Z-vector RHS...
+
+Solving CPSCF equations
+Using DIIS solver
+
+ Iter         Residual      
+------  --------------------
+    1      0.145645048171
+    2      0.155777201249
+    3      0.035808819254
+    4      0.025686558574
+    5      0.005378939391
+    6      0.002627296502
+    7      0.001304868784
+    8      0.000568891622
+    9      0.000261374161
+   10      0.000131413198
+   11      0.000050083878
+   12      0.000022519704
+   13      0.000012369061
+   14      0.000003593707
+   15      0.000002096882
+   16      0.000000719563
+
+CPSCF converged
+
+Building X...
+
+
+Total CASCI Time
+----------------------------
+ Total Time:      37.64 sec
+----------------------------
+
+
+Gradient units are Hartree/Bohr
+---------------------------------------------------
+        dE/dX            dE/dY            dE/dZ
+   -0.0241247152    -0.0336018440     0.0017872975
+    0.0907609199     0.1595990620    -0.1308358853
+   -0.0963808134    -0.1663136608     0.1292199780
+   -0.0347184464    -0.0282445475    -0.0675462058
+    0.1599274973     0.1511600146     0.2346853182
+   -0.1570410146    -0.1856022492    -0.0966773684
+    0.1427071452     0.3115005581    -0.4270640409
+    0.0068200909    -0.0090525516     0.0664426530
+   -0.0171731075    -0.1256947683     0.3693427730
+   -0.1200985505    -0.0628063527    -0.3591953581
+    0.0071699550    -0.0135311307     0.0834564739
+    0.0416856132     0.0338765138     0.0812345414
+   -0.0850715867    -0.0977248413    -0.0624316482
+    0.0520073076     0.0963228718    -0.0931485642
+    0.0241946679    -0.0078199658     0.1458785356
+   -0.0503918201     0.0000950998    -0.2458187107
+    0.0029685110     0.0038898756     0.0003893532
+   -0.0039875959    -0.0022737171    -0.0113659718
+   -0.0024406294    -0.0033033808    -0.0000163965
+    0.0096929381     0.0107945813     0.0084080009
+    0.0002685712    -0.0021400593     0.0090603405
+   -0.0026484000    -0.0037490326     0.0005952483
+    0.0074079372     0.0029067616    -0.0147594525
+   -0.0029447310     0.0105156824    -0.0125873304
+    0.0172524792     0.0146659029    -0.0117002219
+    0.0067310620     0.0080799789     0.0037259895
+    0.0060385656     0.0229391191    -0.0094977267
+---------------------------------------------------
+Net gradient: -2.138815e-02  8.448792e-02 -4.084184e-01
+Net torque:   -1.152781e+01  4.091508e+01  9.067647e+00
+
+Total processing time: 48.83 sec 
+
+ Job finished: Tue Dec 12 02:27:20 2017
+

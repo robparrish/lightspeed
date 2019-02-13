@@ -1,0 +1,30 @@
+# Zero everything out
+reinitialize
+
+set_color cardinal,  [0.549, 0.082, 0.082]
+set_color sandstone, [0.702, 0.600, 0.365]
+
+# Load Geometry
+load geom.xyz
+util.cbaw
+show_as sticks, geom
+show nb_spheres, geom
+
+# Load Cube
+load CTAG.cube
+# Make Isosurfaces at +/-0.05
+isosurface psi_p, CTAG,  0.05
+color sandstone, psi_p
+isosurface psi_m, CTAG,  -0.05
+color cardinal, psi_m
+
+set transparency, 0.5
+
+# Make the scene pretty
+@vis.pymol
+
+# Orient the molecule to a possibly nonstandard orientation
+@orient.pymol
+
+# Make a PNG image
+png CTAG.png, width=800, height=800, ray=1

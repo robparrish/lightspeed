@@ -1,0 +1,395 @@
+\documentclass[fleqn,oneside,12pt]{article}
+\date{}
+\newcommand{\up}[1]{a_{#1}^{\dagger}}
+\newcommand{\down}[1]{a_{#1}}
+\newcommand{\ud}{\mathrm{d}}
+\newcommand{\EE}{\mathrm{E}}
+\newcommand{\diff}[2]{\frac{\ud {#1}}{\ud {#2}}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\fl}{\mathrm{fl}}
+\newcommand{\sqrtfrac}[2]{\sqrt{\frac{#1}{#2}}}
+\newcommand{\ui}{\mathbf{i}}
+\newcommand{\uj}{\mathbf{j}}
+\newcommand{\ua}{\mathbf{a}}
+\newcommand{\ub}{\mathbf{b}}
+\newcommand{\bi}{\bar{i}}
+\newcommand{\bj}{\bar{j}}
+\newcommand{\ba}{\bar{a}}
+\newcommand{\bb}{\bar{b}}
+\newcommand{\tb}{\phantom{}^{Q} \hat b}
+\newcommand{\erf}{\mathrm{erf}}
+\newcommand{\erfc}{\mathrm{erfc}}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{amsmath}
+\usepackage[super]{cite}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\pagestyle{fancyplain}
+\begin{document}
+\lhead{Low-Rank Quantities in Lightspeed}
+\rhead{Ramya Rangan and Rob Parrish}
+
+\subsection{Laplace Denominators}
+
+\subsubsection{Approximation of $1/x$ on $[0, \infty)$ by Exponential Sums}
+
+A very useful identity is,
+\[
+\frac{1}{x}
+=
+\int_{0}^{\infty}
+\mathrm{d} \alpha \
+e^{-x \alpha}
+\approx
+\sum_{w}
+\omega_{w}
+e^{-\alpha_{w} x}
+\]
+The last line indicates that a quadrature rule $\{ <\alpha_{w}, \omega_{w} > \}$
+is being used to approximate the integral over $\alpha$. This understanding of
+the Laplace resolution is due to Almlof,\footnote{J. Alml\"of, \emph{Chem. Phys.
+Lett.}, \textbf{181}, 319 (1991)} who explored a variety of quadrature rules to
+approximate the integral. 
+
+More recently, Braess and Hackbusch have realized that it is better to directly
+fit $1/x$ as a sum of exponentials for $x$ in the range of $[1, R)$,\footnote{D.
+Braess and W. Hackbusch, \emph{IMA J. Numer. Anal.}, \textbf{25}, 685 (2005)}
+rather than using the quadrature interpretation,
+\[
+\frac{1}{x}
+\approx
+\sum_{w}
+\omega_{w}
+e^{-\alpha_{w} x}
+:
+\left .
+\left |
+\frac{1}{x}
+-
+\sum_{w}
+\omega_{w}
+e^{-\alpha_{w} x}
+\right |
+<
+\delta
+\right |_{x \in [1, R)}
+\]
+He has located the optimal quadrature rule by the Remez minimax algorithm for a
+variety of $R$ and for $n_{w}$ between 1 and 50, and has published the
+quadrature rules $\{ < \alpha_{w}, \omega_{w} > \}$ and corresponding maximum
+error $\delta$ for each case.\footnote{See Hackbusch's website.}
+
+\subsubsection{Laplace Denominators in Electronic Structure Theory}
+
+We start from a set of ``occupied'' orbitals labeled by $i,j,k,l$ with orbital
+energies $\{ \epsilon_{i} \}$ and a set of ``virtual'' orbitals labeled by
+$a,b,c,d$ with orbital energies $\{ \epsilon_{a} \}$. We assert that the
+occupied orbital energies are strictly less than the virtual orbital energies,
+i.e., $\epsilon_{i} < \epsilon_{a} \ \forall \ i,a$.
+
+A second-order orbital energy denominator has the form,
+\[
+\Delta_{ijab}
+\equiv
+\frac{1}{
+\epsilon_{a} 
++
+\epsilon_{b} 
+-
+\epsilon_{i} 
+-
+\epsilon_{j} 
+}
+\approx
+\bar \tau_{i}^{w}
+\bar \tau_{j}^{w}
+\tau_{a}^{w}
+\tau_{b}^{w}
+\]
+A third-order orbital energy denominator has the form,
+\[
+\Delta_{ijkabc}
+\equiv
+\frac{1}{
+\epsilon_{a} 
++
+\epsilon_{b} 
++
+\epsilon_{c} 
+-
+\epsilon_{i} 
+-
+\epsilon_{j} 
+-
+\epsilon_{k} 
+}
+\approx
+\bar \tau_{i}^{w}
+\bar \tau_{j}^{w}
+\bar \tau_{k}^{w}
+\tau_{a}^{w}
+\tau_{b}^{w}
+\tau_{c}^{w}
+\]
+In an $n$-th order orbital energy denominator, we define the ``extent'' of the
+argument $x$ to be,
+\[
+R 
+\equiv
+\frac{
+\max(\epsilon_{a})
+-
+\min(\epsilon_{i})
+}{
+\min(\epsilon_{a})
+-
+\max(\epsilon_{i})
+}
+\]
+Using this and a user-specified error criterion $\delta$, we select one of the
+Hackbush quadratures $\{ < \alpha_{w}, \omega_{w} > \}$ for use on $[1, R)$. We
+now define a scaling constant,\footnote{What we are doing here is to write
+\[
+\frac{1}{\eta}
+=
+\gamma
+\frac{1}{\eta / \gamma}
+\]
+with $\gamma$ chosen so that the maximum argument of the second denominator is
+$1$. This simple rescaling then lets us use Hackbusch's quadrature rules.}
+\[
+\gamma
+\equiv
+n
+(
+\min(\epsilon_{a})
+-
+\max(\epsilon_{i})
+)
+\]
+We now define the modified quadrature rule,
+\[
+\alpha_{w}'
+\equiv
+\alpha_{w}
+/
+\gamma
+,
+\
+\omega_{w}'
+\equiv
+\omega_{w}
+/
+\gamma
+\]
+And arrive at, e.g.,
+\[
+\Delta_{ijab}
+\approx
+\sum_{w}
+\omega_{w}'
+\exp(- \alpha_{w}' (
+\epsilon_{a} 
++
+\epsilon_{b} 
+-
+\epsilon_{i} 
+-
+\epsilon_{j} 
+))
+\]
+Finally, by inspection,
+\[
+\bar \tau_{i}^{w}
+\equiv
+\sqrt[2n]{\omega_{w}'}
+e^{+\alpha_{w}' \epsilon_{i}}
+\]
+\[
+\tau_{a}^{w}
+\equiv
+\sqrt[2n]{\omega_{w}'}
+e^{-\alpha_{w}' \epsilon_{a}}
+\]
+
+Note that whereas Hackbush's quadrature rules bound the maximum \emph{absolute}
+error of $1/x$ to $\delta$ for $x \in [1, R)$, our choice of quadrature
+selection and scaling bounds the maximum \emph{relative} error of
+$\Delta_{ijab}$ to $\delta$ for the given orbital eigenvalues.
+
+\section{Density Fitting}
+
+A key quantity in electronic structure theory is the electron repulsion
+integral (ERI),
+\[
+(pq|rs)
+\equiv
+\iint_{\mathbb{R}^6}
+\mathrm{d}^3 r_1 \
+\mathrm{d}^3 r_2 \
+\phi_{p} (\vec r_1)
+\phi_{q} (\vec r_1)
+\frac{1}{r_{12}}
+\phi_{r} (\vec r_2)
+\phi_{s} (\vec r_2)
+\]
+Here $\{ \phi_{p} (\vec r_1) \}$ is the atomic-orbital basis of atom-centered
+Gaussian functions (contracted Cartesian or real solid harmonic basis
+functions). Analytical formulae exist for the ERIs, but they are a major
+bottleneck to generate, store, and manipulate.
+
+In density fitting,\footnote{Specifically robust Coulomb-metric density
+fitting.} we approximate the electron repulsion integrals
+\[
+(pq|rs)
+\approx
+(pq|A)
+(A|B)^{-1}
+(B|rs)
+=
+(pq|A)
+(A|C)^{-1/2}
+(C|B)^{-1/2}
+(B|rs)
+\equiv
+L_{pq}^{C}
+L_{rs}^{C}
+\]
+Here $\{ \chi_{A} (\vec r_1) \}$ is an auxiliary basis set of atom-centered
+Gaussian functions. This is usually defined to accompany a given primary AO
+basis set, and has typically $2-5\times$ the number of basis functions as the
+primary basis.
+
+In the above, the two-index integrals (often called the DF metric) are,
+\[
+(A|B)
+\equiv
+\iint_{\mathbb{R}^6}
+\mathrm{d}^3 r_1 \
+\mathrm{d}^3 r_2 \
+\chi_{A} (\vec r_1)
+\frac{1}{r_{12}}
+\chi_{B} (\vec r_2)
+\]
+and the three-index integrals are,
+\[
+(A|pq)
+\equiv
+\iint_{\mathbb{R}^6}
+\mathrm{d}^3 r_1 \
+\mathrm{d}^3 r_2 \
+\chi_{A} (\vec r_1)
+\frac{1}{r_{12}}
+\phi_{p} (\vec r_1)
+\phi_{q} (\vec r_2)
+\]
+If one has formulae (or codes) for the four-center integrals $(pq|rs)$, one can
+very easily obtain the two- and three-center integrals by substituting ``null''
+basis functions $\varnothing (\vec r_1) \equiv 1$ (a single Gaussian $s$
+function at the origin with exponent of $0$ and prefactor of $1$) into the
+expressions for the four-center integrals, e.g., $(A|B) \equiv (A \varnothing |
+B \varnothing)$ or $(A|pq) \equiv (A \varnothing | pq)$. The Cauchy-Schwarz
+bound can be exploited to only form (and, optionally, only store) significant
+$pq$ pairs in the three-index integrals above.\footnote{The LS \texttt{PairList}
+object tells you about the significant shell pairs. We throw away whole shell
+pairs to preserve rotational invariance.}
+
+The form seen above in terms of $L_{pq}^{C}$ is the ``symmetric'' form of the DF
+approximation, and involves applying the inverse square root of the metric to
+the three-index integrals. In practice, the auxiliary basis may be rather
+ill-conditioned in the Coulomb metric, but this is easily dealt with by
+discarding the smallest eigenvectors in the metric to preserve an inverse
+relative condition number of $\kappa$ in the basis,
+\[
+(A|B)^{-1/2}
+\equiv
+U_{AC}
+s_{C}^{-1/2}
+U_{BC}
+: \
+s_{C} > \kappa s_{C}^{\mathrm{max}}
+,
+\
+(A|B)
+=
+U_{AC}
+s_{C}
+U_{BC}
+\]
+Here $U_{AC}$ are the eigenvectors and $S_{C}$ are the eigenvalues of the metric
+$(A|B)$. The value of $\kappa$ is specified by the user, and should be small
+enough that significant parts of the auxiliary basis are not discarded, but
+large enough that numerical precision artifacts do not affect the result.
+$\kappa = 10^{-12}$ seems to be a reasonable choice across a vast range of
+EST problems, provided that double precision is used.
+
+\subsection{AO Density Fitting}
+
+Our objective in \texttt{ao\_df} is to produce the tensor,
+\[
+L_{pq}^{C} \equiv (C|A)^{-1/2} (A|pq)
+\]
+The tensor should be stored as $Apq$, and will not exploit spatial sparsity or
+permutational symmetry. 
+
+\begin{enumerate}
+\item{Form the metric matrix $(C|A)$.}
+\item{Form the metric inverse square root $(C|A)^{-1/2}$ via the
+\texttt{Tensor::power} method. Be sure to condition the inverse via the
+user-supplied inverse relative condition number $\kappa$.}
+\item{Allocate a single tensor \texttt{L} with indices $Apq$.}
+\item{Form the integrals $(A|pq)$ and place into \texttt{L}. Do not compute
+insignificant integrals}
+\item{Perform the matrix multiplication $(C|A)^{-1/2} (A|pq)$ in chunks of $pq$
+(using chunks of $N_A$ $pq$ indices works great). Copy the chunk from \texttt{L}
+into a temporary buffer, and then \texttt{dgemm} it back into \texttt{L}.}
+\end{enumerate}
+Overall, this uses a single copy of size $Apq$, plus two copies of $(C|A)$. And
+it is fairly simple as such algorithms go. E.g., we could have avoided a memcpy
+in the last stage by directly computing the integrals in the \texttt{dgemm}
+buffer. But then we would have had issues with shell granularity of the
+integrals. 
+
+\subsection{MO Density Fitting}
+
+Our objective in \texttt{mo\_df} is to produce the tensor,
+\[
+L_{ia}^{C} \equiv (C|A)^{-1/2} (A|pq) C_{pi} \bar C_{pa}
+\]
+The tensor should be stored as $iaC$. A number of combinations of $C_{pi}$ and
+$\bar C_{qa}$ should be allowed. The transformation in $C_{pi}$ should be
+performed first, and the documentation should recommend using the smaller
+(usually occupied) index for the first part of the transformation, to save
+FLOPS/storage. 
+
+\begin{enumerate}
+\item{Form the metric matrix $(C|A)$.}
+\item{Form the metric inverse square root $(C|A)^{-1/2}$ via the
+\texttt{Tensor::power} method. Be sure to condition the inverse via the
+user-supplied inverse relative condition number $\kappa$.}
+\item{Allocate a temporary copy of the target tensors with indices $Aia$}
+\item{For stripes of $A$ (up to say 2 GB, using whole $A$ shells):}
+\begin{enumerate}
+\item Form the integrals $(A|pq)$ for the stripe. Do not compute insignificant
+integrals.
+\item Perform the contraction $(A|pi) = (A|pq) C_{qi}$ with one \texttt{dgemm}
+call for the stripe.
+\item Perform the contraction $(A|ia) = (A|pi) \bar C_{pa}$ with
+$N_{A}^{\mathrm{stripe}}$ \texttt{dgemm} calls. The result should be placed
+directly in the temporary target tensors.
+\end{enumerate}
+\item Perform the fitting $L_{ia}^{C} = (C|A)^{-1/2} (A|ia)$ for each target
+tensor. The striping will reverse from $Aia$ to $iaC$ in this step. An extra
+copy of size $iaC$ can be used in this step. 
+\end{enumerate}
+Here the integrals $(A|pq)$ can be used for all combinations of $C_{pi}$ and
+$\bar C_{qa}$. If one is clever, the first-half transform in 4b can be re-used
+for tasks with the same $C_{pi}$ tensor. 
+
+
+\end{document}

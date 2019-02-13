@@ -1,0 +1,4 @@
+lightspeed - External C++ header file API
+cpp - C++/CUDA source code implementing lightspeed
+python - wrappers of lightspeed headers C++ to Python, with Python extensions
+module.mk - specific build instructions for lightspeed C++ and Python libraries

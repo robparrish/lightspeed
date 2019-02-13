@@ -1,0 +1,18 @@
+=> Psidewinder(PSIW): A lightweight electronic structrure code <= 
+
+PSIW contains flexible but efficient implementations of the favorite electronic
+structure methods used in the Martinez Group.
+
+=> File structure <= 
+
+util.py - methods for printing titles and timings information
+options.py - the Options class, for rule-based options 
+geometry.py - the Geometry class, defining the resources, basis set, and
+    external environment for an EST method
+qmmm.py - the QMMM class, links to OpenMM via Python interface
+dftd3.py - the DFTD3 class hierarchy, a Python version of Grimme's DFTD3
+rhf.py - the RHF class (RHF and RKS, including FOMO)
+cis.py - the CIS class (restricted CIS)
+casci.py - the CASCI class (restricted CASCI)
+fd.py - utility functions to compute finite difference gradients
+casci_lot.py - CASCI LOT wrapper
