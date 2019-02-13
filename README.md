@@ -29,41 +29,42 @@ layering of these kernels to produce useful EST methods in Point 2.
 
 The part of this repository which constitutes LS is in src/*
 
-# Psidewinder
+# EST
 
-Psidewinder (PSIW) is a simple Python library which implements production-scale
-electronic structure methods in a flexible, extensible manner. One of the key
-design goals with PSIW is that there is no "main" method and that EST methods
-should be built as objects for each problem encountered. These objects can
-solve for the electronic wavefunction, compute extra desired properties on
-demand (gradients, couplings, overlaps, observables), and allow fine-grained
-access to the state variables computed during wavefunction optimization. 
+EST (Electronic Structure Theory) is a simple Python library which implements
+production-scale electronic structure methods in a flexible, extensible manner.
+One of the key design goals with EST is that there is no "main" method and that
+EST methods should be built as objects for each problem encountered. These
+objects can solve for the electronic wavefunction, compute extra desired
+properties on demand (gradients, couplings, overlaps, observables), and allow
+fine-grained access to the state variables computed during wavefunction
+optimization. 
 
-The part of this repository which constitutes PSIW in in psiw/*
+The part of this repository which constitutes EST in in est/*
 
 # Source Directory Structure
 
 The major LS source directories are:
 
 * src - the main C++/Python source tree constituting the heart of LS
+* est - a simple python-based electronic structure code stack
 * data - ancillary data needed to use LS, such as basis sets
 * tests - unit/production tests for the LS library
-* psiw - a simple python-based EST code stack
+
+More minor LS source directories are:
+
+* md - a simple adiabatic / overlap following molecular dynamics code.
+* apps - small plugin applications using LS and EST to accomplish custom
+    theoretical chemistry workflows.
 
 # Key Directories For New Users
 
 * src/lightspeed - C++ library API (wrapped ~100% to Python)
 * src/python - C++ -> Python wrapping and Python extensions
-* psiw - Python EST code stack
+* est - Python EST code stack
 
-# Install Directory Structure
-
-The major LS install directories are:
-
-* cc - the LS C++ API and dynamic library files
-* python - the LS python API and dynamic library files
-* psiw - the Psidewinder python-based EST code (a LS front-end)
-* data - ancillary data needed to use LS, such as Rys quadratures and basis sets
+More detailed documentation, installation instructions, tutorials, and unit
+tests are forthcoming.
 
 # Authors
 
