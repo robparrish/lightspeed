@@ -67,7 +67,7 @@ The major LS install directories are:
 
 # Authors
 
-* Robert Parrish - Lead Author (robparrish@gmail.com)
+* Robert Parrish (robparrish@gmail.com)
 * Xin Li - Integrals/Gradients/Infrastructure
 * Jason Ford - BlurBox Routines/Infrastructure
 * Ruben Guerrero - Davidson/Potential Gradients
