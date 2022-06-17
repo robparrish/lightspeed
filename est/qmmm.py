@@ -527,7 +527,7 @@ try:
                 Aind = bond.atom1.index
                 Bind = bond.atom2.index
                 if Aind in qm_inds and Bind not in qm_inds:
-                    lin_inds.append((Aind, Bind))
+                    link_inds.append((Aind, Bind))
                 if Bind in qm_inds and Aind not in qm_inds:
                     link_inds.append((Bind, Aind))
     
